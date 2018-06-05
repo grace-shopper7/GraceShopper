@@ -12,3 +12,21 @@ router.get('/', (req, res, next) => {
     .then(users => res.json(users))
     .catch(next)
 })
+
+router.put('/:userId', async (req, res, next) => {
+  try {
+    let updatedUser = await User.update(req.body, { where: {
+      id: req.params.userId
+    }})
+    res.json(updatedUser)
+  } catch (err) {console.log(err)}
+})
+
+router.delete('/:userId', async (req, res, next) => {
+  try {
+    await User.destroy({ where: {
+      id: req.params.userId
+    }})
+    res.status(204).send()
+  } catch (err) {console.log(err)}
+})
