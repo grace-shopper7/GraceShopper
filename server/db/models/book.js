@@ -21,7 +21,7 @@ const Book = db.define('book', {
     type: Sequelize.INTEGER,
     // JavaScript will do weird things to floating numbers, so let's make type of the price attribute integer and divide any price by 100 when we actually render it to users
   },
-  genres: {
+  genre: {
     type: Sequelize.STRING,
   },
   condition: {
