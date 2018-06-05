@@ -29,17 +29,17 @@ const User = db.define('user', {
   },
   firstName: {
     type: Sequelize.STRING,
-    allowNull: false,
-    validate: {
-      notEmpty: true
-    }
+    allowNull: true,
+    // validate: {
+    //   notEmpty: true
+    // }
   },
   lastName: {
     type: Sequelize.STRING,
-    allowNull: false,
-    validate: {
-      notEmpty: true
-    }
+    allowNull: true,
+    // validate: {
+    //   notEmpty: true
+    // }
   },
   admin: {
     type: Sequelize.BOOLEAN,
