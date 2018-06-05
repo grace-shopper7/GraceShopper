@@ -4,7 +4,7 @@ const db = require('../db')
 //Join table - Cart & Book
 const Transaction = db.define('transaction', {
   quantity: {
-      type: Sequelize.Integer,
+      type: Sequelize.INTEGER,
       allowNull: false,
       defaultValue: 1
   },
