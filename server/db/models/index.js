@@ -31,8 +31,8 @@ User.hasMany(Review)
 Cart.belongsTo(User)
 User.hasMany(Cart)
 
-Cart.hasMany(Book, {through: Transaction})
-Book.hasMany(Cart, {through: Transaction})
+Cart.belongsToMany(Book, {through: Transaction})
+Book.belongsToMany(Cart, {through: Transaction})
 
 Address.belongsTo(User)
 User.hasMany(Address)
