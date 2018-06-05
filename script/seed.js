@@ -22,14 +22,14 @@ async function seed() {
   // executed until that promise resolves!
   const users = await Promise.all([
     User.create({
-      firstname: "cody",
-      lastname: "gabe",
+      firstName: "cody",
+      lastName: "gabe",
       email: "cody@email.com",
       password: "123"
     }),
     User.create({
-      firstname: "cody",
-      lastname: "gabe",
+      firstName: "murphy",
+      lastName: "gabe",
       email: "murphy@email.com",
       password: "123"
     })
