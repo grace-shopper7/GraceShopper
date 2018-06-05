@@ -27,14 +27,14 @@ const User = db.define('user', {
   googleId: {
     type: Sequelize.STRING
   },
-  firstname: {
+  firstName: {
     type: Sequelize.STRING,
     allowNull: false,
     validate: {
       notEmpty: true
     }
   },
-  lastname: {
+  lastName: {
     type: Sequelize.STRING,
     allowNull: false,
     validate: {
