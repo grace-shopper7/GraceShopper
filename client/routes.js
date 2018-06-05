@@ -11,6 +11,7 @@ import { gotBooks } from './store/books'
  */
 class Routes extends Component {
   componentDidMount () {
+    console.log(this.props)
     this.props.gotBooks()
     this.props.loadInitialData()
   }
@@ -45,7 +46,8 @@ const mapState = (state) => {
   return {
     // Being 'logged in' for our purposes will be defined has having a state.user that has a truthy id.
     // Otherwise, state.user will be an empty object, and state.user.id will be falsey
-    isLoggedIn: !!state.user.id
+    isLoggedIn: !!state.user.id,
+    books: state.books
   }
 }
 
