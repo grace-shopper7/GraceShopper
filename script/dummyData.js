@@ -556,4 +556,4 @@ const bookData = [{
   "imageUrl": "http://dummyimage.com/218x130.png/ff4444/ffffff"
 }];
 
-module.exports = { userData, bookData };
+module.exports = { userData, bookData }
