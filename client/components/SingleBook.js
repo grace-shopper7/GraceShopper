@@ -23,7 +23,7 @@ class SingleBook extends Component {
 
     return (
       <div>
-        <div>{selectedBook.imageUrl}</div>
+        <div><img src={selectedBook.imageUrl}/></div>
 
         <div>
           <h3>{selectedBook.title}</h3>
