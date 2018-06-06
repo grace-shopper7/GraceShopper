@@ -11,11 +11,12 @@ import SingleBook from   './components/SingleBook'
  * COMPONENT
  */
 class Routes extends Component {
-  componentDidMount () {
+  componentDidMount = async () => {
     console.log(this.props)
+    await this.props.loadInitialData()
     this.props.gotBooks()
-    this.props.loadInitialData()
   }
+
 
   render () {
     const {isLoggedIn} = this.props
@@ -50,6 +51,7 @@ const mapState = (state) => {
     // Being 'logged in' for our purposes will be defined has having a state.user that has a truthy id.
     // Otherwise, state.user will be an empty object, and state.user.id will be falsey
     isLoggedIn: !!state.user.id,
+    user: state.user,
     books: state.books
   }
 }
@@ -59,7 +61,7 @@ const mapDispatch = (dispatch) => {
     loadInitialData () {
       dispatch(me())
     },
-    gotBooks: () => dispatch(gotBooks())
+    gotBooks: () => dispatch(gotBooks()),
   }
 }
 
