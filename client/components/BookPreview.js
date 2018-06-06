@@ -5,7 +5,7 @@ const BookPreview = props => {
   const book = props.book;
   return (
     <div className="bookpreview">
-      <Link to={`/book/${book.id}`}>
+      <Link to={`/books/${book.id}`}>
         <img src={book.imageUrl} />
         <p>{book.title}</p>
       </Link>

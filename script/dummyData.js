@@ -14,7 +14,8 @@ const bookData = [{
   "condition": null,
   "description": "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
   "numberSold": 2,
-  "imageUrl": "http://dummyimage.com/132x155.png/dddddd/000000"
+  "imageUrl": "http://dummyimage.com/132x155.png/dddddd/000000",
+  "authorId": 1
 }, {
   "title": "A Good Marriage",
   "publicationDate": "7/17/2004",
@@ -25,7 +26,8 @@ const bookData = [{
   "condition": null,
   "description": "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
   "numberSold": 2,
-  "imageUrl": "http://dummyimage.com/187x187.png/ff4444/ffffff"
+  "imageUrl": "http://dummyimage.com/187x187.png/ff4444/ffffff",
+  "authorId": 1
 }, {
   "title": "Yo Yo (Yoyo)",
   "publicationDate": "12/18/2000",
@@ -36,7 +38,8 @@ const bookData = [{
   "condition": null,
   "description": "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
   "numberSold": 5,
-  "imageUrl": "http://dummyimage.com/139x227.bmp/ff4444/ffffff"
+  "imageUrl": "http://dummyimage.com/139x227.bmp/ff4444/ffffff",
+  "authorId": 1
 }, {
   "title": "Intact (Intacto)",
   "publicationDate": "1/4/2005",
@@ -47,7 +50,8 @@ const bookData = [{
   "condition": null,
   "description": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\n\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
   "numberSold": 4,
-  "imageUrl": "http://dummyimage.com/134x156.jpg/ff4444/ffffff"
+  "imageUrl": "http://dummyimage.com/134x156.jpg/ff4444/ffffff",
+  "authorId": 1
 }, {
   "title": "Expelled from Paradise",
   "publicationDate": "4/3/2005",
@@ -58,7 +62,8 @@ const bookData = [{
   "condition": null,
   "description": "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.\n\nFusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
   "numberSold": 3,
-  "imageUrl": "http://dummyimage.com/168x187.bmp/ff4444/ffffff"
+  "imageUrl": "http://dummyimage.com/168x187.bmp/ff4444/ffffff",
+  "authorId": 1
 }, {
   "title": "Vampire Hunter D",
   "publicationDate": "5/14/2003",
@@ -69,7 +74,8 @@ const bookData = [{
   "condition": null,
   "description": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.\n\nSed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
   "numberSold": 3,
-  "imageUrl": "http://dummyimage.com/201x177.png/ff4444/ffffff"
+  "imageUrl": "http://dummyimage.com/201x177.png/ff4444/ffffff",
+  "authorId": 2
 }, {
   "title": "Don't Look Now",
   "publicationDate": "9/22/2002",
@@ -80,7 +86,8 @@ const bookData = [{
   "condition": null,
   "description": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
   "numberSold": 3,
-  "imageUrl": "http://dummyimage.com/148x185.jpg/ff4444/ffffff"
+  "imageUrl": "http://dummyimage.com/148x185.jpg/ff4444/ffffff",
+  "authorId": 2
 }, {
   "title": "Tyler Perry's Temptation: Confessions of a Marriage Counselor",
   "publicationDate": "9/5/2004",
@@ -91,7 +98,8 @@ const bookData = [{
   "condition": null,
   "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.\n\nMorbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
   "numberSold": 4,
-  "imageUrl": "http://dummyimage.com/249x160.jpg/dddddd/000000"
+  "imageUrl": "http://dummyimage.com/249x160.jpg/dddddd/000000",
+  "authorId": 2
 }, {
   "title": "Syndromes and a Century (Sang sattawat)",
   "publicationDate": "6/15/2001",
@@ -102,7 +110,8 @@ const bookData = [{
   "condition": null,
   "description": "Phasellus in felis. Donec semper sapien a libero. Nam dui.\n\nProin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.\n\nInteger ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
   "numberSold": 5,
-  "imageUrl": "http://dummyimage.com/115x208.png/5fa2dd/ffffff"
+  "imageUrl": "http://dummyimage.com/115x208.png/5fa2dd/ffffff",
+  "authorId": 2
 }, {
   "title": "No Man of Her Own ",
   "publicationDate": "1/15/2004",
@@ -113,7 +122,8 @@ const bookData = [{
   "condition": null,
   "description": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.\n\nSed ante. Vivamus tortor. Duis mattis egestas metus.",
   "numberSold": 1,
-  "imageUrl": "http://dummyimage.com/121x190.bmp/dddddd/000000"
+  "imageUrl": "http://dummyimage.com/121x190.bmp/dddddd/000000",
+  "authorId": 2
 }, {
   "title": "1981",
   "publicationDate": "6/13/2001",
@@ -124,7 +134,8 @@ const bookData = [{
   "condition": null,
   "description": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
   "numberSold": 2,
-  "imageUrl": "http://dummyimage.com/142x219.bmp/dddddd/000000"
+  "imageUrl": "http://dummyimage.com/142x219.bmp/dddddd/000000",
+  "authorId": 3
 }, {
   "title": "Words, The",
   "publicationDate": "11/22/2001",
@@ -135,7 +146,8 @@ const bookData = [{
   "condition": null,
   "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.\n\nDuis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
   "numberSold": 3,
-  "imageUrl": "http://dummyimage.com/114x154.jpg/5fa2dd/ffffff"
+  "imageUrl": "http://dummyimage.com/114x154.jpg/5fa2dd/ffffff",
+  "authorId": 3
 }, {
   "title": "Eddie Izzard: Force Majeure Live",
   "publicationDate": "10/23/2003",
@@ -146,7 +158,8 @@ const bookData = [{
   "condition": null,
   "description": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.\n\nSed ante. Vivamus tortor. Duis mattis egestas metus.",
   "numberSold": 3,
-  "imageUrl": "http://dummyimage.com/131x200.jpg/dddddd/000000"
+  "imageUrl": "http://dummyimage.com/131x200.jpg/dddddd/000000",
+  "authorId": 3
 }, {
   "title": "Tree Grows in Brooklyn, A",
   "publicationDate": "1/11/2002",
@@ -157,7 +170,8 @@ const bookData = [{
   "condition": null,
   "description": "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.\n\nProin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
   "numberSold": 4,
-  "imageUrl": "http://dummyimage.com/135x152.jpg/cc0000/ffffff"
+  "imageUrl": "http://dummyimage.com/135x152.jpg/cc0000/ffffff",
+  "authorId": 3
 }, {
   "title": "Frankenstein Must Be Destroyed",
   "publicationDate": "9/1/2003",
@@ -168,7 +182,8 @@ const bookData = [{
   "condition": null,
   "description": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
   "numberSold": 1,
-  "imageUrl": "http://dummyimage.com/117x225.bmp/ff4444/ffffff"
+  "imageUrl": "http://dummyimage.com/117x225.bmp/ff4444/ffffff",
+  "authorId": 3
 }, {
   "title": "Beauty in Trouble (Kráska v nesnázích)",
   "publicationDate": "5/28/2003",
@@ -179,7 +194,8 @@ const bookData = [{
   "condition": null,
   "description": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
   "numberSold": 4,
-  "imageUrl": "http://dummyimage.com/104x164.png/5fa2dd/ffffff"
+  "imageUrl": "http://dummyimage.com/104x164.png/5fa2dd/ffffff",
+  "authorId": 3
 }, {
   "title": "Alligator",
   "publicationDate": "3/6/2003",
@@ -190,7 +206,8 @@ const bookData = [{
   "condition": null,
   "description": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
   "numberSold": 4,
-  "imageUrl": "http://dummyimage.com/179x103.jpg/dddddd/000000"
+  "imageUrl": "http://dummyimage.com/179x103.jpg/dddddd/000000",
+  "authorId": 3
 }, {
   "title": "My Life in Ruins",
   "publicationDate": "3/9/2003",
@@ -201,7 +218,8 @@ const bookData = [{
   "condition": null,
   "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.\n\nDuis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
   "numberSold": 5,
-  "imageUrl": "http://dummyimage.com/206x144.bmp/ff4444/ffffff"
+  "imageUrl": "http://dummyimage.com/206x144.bmp/ff4444/ffffff",
+  "authorId": 3
 }, {
   "title": "Big White, The",
   "publicationDate": "5/17/2005",
@@ -212,7 +230,8 @@ const bookData = [{
   "condition": null,
   "description": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\nEtiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
   "numberSold": 4,
-  "imageUrl": "http://dummyimage.com/232x229.bmp/cc0000/ffffff"
+  "imageUrl": "http://dummyimage.com/232x229.bmp/cc0000/ffffff",
+  "authorId": 3
 }, {
   "title": "Chapiteau-show (Shapito-shou)",
   "publicationDate": "4/3/2005",
@@ -223,7 +242,8 @@ const bookData = [{
   "condition": null,
   "description": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
   "numberSold": 2,
-  "imageUrl": "http://dummyimage.com/171x113.jpg/cc0000/ffffff"
+  "imageUrl": "http://dummyimage.com/171x113.jpg/cc0000/ffffff",
+  "authorId": 4
 }, {
   "title": "She-Devil",
   "publicationDate": "4/19/2001",
@@ -234,7 +254,8 @@ const bookData = [{
   "condition": null,
   "description": "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.\n\nNulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
   "numberSold": 2,
-  "imageUrl": "http://dummyimage.com/223x210.png/ff4444/ffffff"
+  "imageUrl": "http://dummyimage.com/223x210.png/ff4444/ffffff",
+  "authorId": 4
 }, {
   "title": "Dragon Ball Z: Super Android 13! (Doragon bôru Z 7: Kyokugen batoru!! San dai sûpâ saiyajin)",
   "publicationDate": "11/21/2004",
@@ -245,7 +266,8 @@ const bookData = [{
   "condition": null,
   "description": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
   "numberSold": 3,
-  "imageUrl": "http://dummyimage.com/186x108.bmp/5fa2dd/ffffff"
+  "imageUrl": "http://dummyimage.com/186x108.bmp/5fa2dd/ffffff",
+  "authorId": 4
 }, {
   "title": "Mystery of the Third Planet, The (Tayna tretey planety)",
   "publicationDate": "7/9/2001",
@@ -256,7 +278,8 @@ const bookData = [{
   "condition": null,
   "description": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
   "numberSold": 3,
-  "imageUrl": "http://dummyimage.com/141x124.bmp/cc0000/ffffff"
+  "imageUrl": "http://dummyimage.com/141x124.bmp/cc0000/ffffff",
+  "authorId": 4
 }, {
   "title": "One-Eyed Jacks",
   "publicationDate": "4/1/2005",
@@ -267,7 +290,8 @@ const bookData = [{
   "condition": null,
   "description": "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.",
   "numberSold": 5,
-  "imageUrl": "http://dummyimage.com/120x124.bmp/5fa2dd/ffffff"
+  "imageUrl": "http://dummyimage.com/120x124.bmp/5fa2dd/ffffff",
+  "authorId": 5
 }, {
   "title": "21-87",
   "publicationDate": "4/5/2003",
@@ -278,7 +302,8 @@ const bookData = [{
   "condition": null,
   "description": "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.\n\nFusce consequat. Nulla nisl. Nunc nisl.",
   "numberSold": 2,
-  "imageUrl": "http://dummyimage.com/169x142.jpg/cc0000/ffffff"
+  "imageUrl": "http://dummyimage.com/169x142.jpg/cc0000/ffffff",
+  "authorId": 5
 }, {
   "title": "Cyclo (Xich lo)",
   "publicationDate": "6/24/2004",
@@ -289,7 +314,8 @@ const bookData = [{
   "condition": null,
   "description": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
   "numberSold": 3,
-  "imageUrl": "http://dummyimage.com/139x206.bmp/ff4444/ffffff"
+  "imageUrl": "http://dummyimage.com/139x206.bmp/ff4444/ffffff",
+  "authorId": 5
 }, {
   "title": "Felicity",
   "publicationDate": "1/26/2003",
@@ -300,7 +326,8 @@ const bookData = [{
   "condition": null,
   "description": "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\n\nQuisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
   "numberSold": 1,
-  "imageUrl": "http://dummyimage.com/250x214.jpg/dddddd/000000"
+  "imageUrl": "http://dummyimage.com/250x214.jpg/dddddd/000000",
+  "authorId": 5
 }, {
   "title": "Man Who Saw Tomorrow, The",
   "publicationDate": "2/9/2005",
@@ -311,7 +338,8 @@ const bookData = [{
   "condition": null,
   "description": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
   "numberSold": 5,
-  "imageUrl": "http://dummyimage.com/144x101.bmp/dddddd/000000"
+  "imageUrl": "http://dummyimage.com/144x101.bmp/dddddd/000000",
+  "authorId": 5
 }, {
   "title": "Eddie and the Cruisers II: Eddie Lives!",
   "publicationDate": "10/12/2001",
@@ -322,7 +350,8 @@ const bookData = [{
   "condition": null,
   "description": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
   "numberSold": 3,
-  "imageUrl": "http://dummyimage.com/237x245.png/cc0000/ffffff"
+  "imageUrl": "http://dummyimage.com/237x245.png/cc0000/ffffff",
+  "authorId": 5
 }, {
   "title": "Silence (Chinmoku)",
   "publicationDate": "11/11/2003",
@@ -333,7 +362,8 @@ const bookData = [{
   "condition": null,
   "description": "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
   "numberSold": 3,
-  "imageUrl": "http://dummyimage.com/242x224.jpg/5fa2dd/ffffff"
+  "imageUrl": "http://dummyimage.com/242x224.jpg/5fa2dd/ffffff",
+  "authorId": 6
 }, {
   "title": "Sweetwater",
   "publicationDate": "6/29/2002",
@@ -344,7 +374,8 @@ const bookData = [{
   "condition": null,
   "description": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.\n\nCurabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
   "numberSold": 4,
-  "imageUrl": "http://dummyimage.com/219x197.bmp/dddddd/000000"
+  "imageUrl": "http://dummyimage.com/219x197.bmp/dddddd/000000",
+  "authorId": 6
 }, {
   "title": "Envy (Kiskanmak)",
   "publicationDate": "9/25/2004",
@@ -355,7 +386,8 @@ const bookData = [{
   "condition": null,
   "description": "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
   "numberSold": 3,
-  "imageUrl": "http://dummyimage.com/155x170.jpg/ff4444/ffffff"
+  "imageUrl": "http://dummyimage.com/155x170.jpg/ff4444/ffffff",
+  "authorId": 6
 }, {
   "title": "Jeanne and the Perfect Guy (Jeanne et le garçon formidable)",
   "publicationDate": "5/14/2005",
@@ -366,7 +398,8 @@ const bookData = [{
   "condition": null,
   "description": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
   "numberSold": 4,
-  "imageUrl": "http://dummyimage.com/200x249.jpg/cc0000/ffffff"
+  "imageUrl": "http://dummyimage.com/200x249.jpg/cc0000/ffffff",
+  "authorId": 7
 }, {
   "title": "Caveman's Valentine, The",
   "publicationDate": "8/10/2002",
@@ -377,7 +410,8 @@ const bookData = [{
   "condition": null,
   "description": "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.\n\nMorbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.\n\nFusce consequat. Nulla nisl. Nunc nisl.",
   "numberSold": 3,
-  "imageUrl": "http://dummyimage.com/144x171.png/dddddd/000000"
+  "imageUrl": "http://dummyimage.com/144x171.png/dddddd/000000",
+  "authorId": 7
 }, {
   "title": "Arsène Lupin",
   "publicationDate": "8/11/2001",
@@ -388,7 +422,8 @@ const bookData = [{
   "condition": null,
   "description": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
   "numberSold": 1,
-  "imageUrl": "http://dummyimage.com/139x173.jpg/ff4444/ffffff"
+  "imageUrl": "http://dummyimage.com/139x173.jpg/ff4444/ffffff",
+  "authorId": 7
 }, {
   "title": "Fat Man and Little Boy",
   "publicationDate": "11/22/2004",
@@ -399,7 +434,8 @@ const bookData = [{
   "condition": null,
   "description": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.",
   "numberSold": 4,
-  "imageUrl": "http://dummyimage.com/114x138.bmp/5fa2dd/ffffff"
+  "imageUrl": "http://dummyimage.com/114x138.bmp/5fa2dd/ffffff",
+  "authorId": 7
 }, {
   "title": "José and Pilar (José e Pilar)",
   "publicationDate": "7/22/2000",
@@ -410,7 +446,8 @@ const bookData = [{
   "condition": null,
   "description": "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
   "numberSold": 2,
-  "imageUrl": "http://dummyimage.com/117x189.jpg/cc0000/ffffff"
+  "imageUrl": "http://dummyimage.com/117x189.jpg/cc0000/ffffff",
+  "authorId": 7
 }, {
   "title": "A Merry Friggin' Christmas",
   "publicationDate": "4/10/2003",
@@ -421,7 +458,8 @@ const bookData = [{
   "condition": null,
   "description": "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.\n\nQuisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
   "numberSold": 5,
-  "imageUrl": "http://dummyimage.com/126x240.bmp/dddddd/000000"
+  "imageUrl": "http://dummyimage.com/126x240.bmp/dddddd/000000",
+  "authorId": 8
 }, {
   "title": "Far North",
   "publicationDate": "8/18/2000",
@@ -432,7 +470,8 @@ const bookData = [{
   "condition": null,
   "description": "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.\n\nInteger ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.\n\nNam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
   "numberSold": 1,
-  "imageUrl": "http://dummyimage.com/203x237.jpg/ff4444/ffffff"
+  "imageUrl": "http://dummyimage.com/203x237.jpg/ff4444/ffffff",
+  "authorId": 8
 }, {
   "title": "Harsh Times",
   "publicationDate": "3/9/2005",
@@ -443,7 +482,8 @@ const bookData = [{
   "condition": null,
   "description": "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
   "numberSold": 4,
-  "imageUrl": "http://dummyimage.com/174x196.bmp/ff4444/ffffff"
+  "imageUrl": "http://dummyimage.com/174x196.bmp/ff4444/ffffff",
+  "authorId": 8
 }, {
   "title": "Generation Um...",
   "publicationDate": "7/25/2000",
@@ -454,7 +494,8 @@ const bookData = [{
   "condition": null,
   "description": "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.\n\nNullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
   "numberSold": 5,
-  "imageUrl": "http://dummyimage.com/233x102.jpg/cc0000/ffffff"
+  "imageUrl": "http://dummyimage.com/233x102.jpg/cc0000/ffffff",
+  "authorId": 8
 }, {
   "title": "Lakeview Terrace",
   "publicationDate": "9/9/2003",
@@ -465,7 +506,8 @@ const bookData = [{
   "condition": null,
   "description": "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.\n\nMorbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.\n\nFusce consequat. Nulla nisl. Nunc nisl.",
   "numberSold": 2,
-  "imageUrl": "http://dummyimage.com/211x188.bmp/ff4444/ffffff"
+  "imageUrl": "http://dummyimage.com/211x188.bmp/ff4444/ffffff",
+  "authorId": 8
 }, {
   "title": "Struck by Lightning",
   "publicationDate": "12/23/2004",
@@ -476,7 +518,8 @@ const bookData = [{
   "condition": null,
   "description": "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
   "numberSold": 1,
-  "imageUrl": "http://dummyimage.com/104x138.bmp/5fa2dd/ffffff"
+  "imageUrl": "http://dummyimage.com/104x138.bmp/5fa2dd/ffffff",
+  "authorId": 9
 }, {
   "title": "Speedway",
   "publicationDate": "3/22/2003",
@@ -487,7 +530,8 @@ const bookData = [{
   "condition": null,
   "description": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
   "numberSold": 4,
-  "imageUrl": "http://dummyimage.com/248x134.jpg/ff4444/ffffff"
+  "imageUrl": "http://dummyimage.com/248x134.jpg/ff4444/ffffff",
+  "authorId": 9
 }, {
   "title": "Amarcord",
   "publicationDate": "2/18/2005",
@@ -498,7 +542,8 @@ const bookData = [{
   "condition": null,
   "description": "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.\n\nProin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
   "numberSold": 4,
-  "imageUrl": "http://dummyimage.com/206x188.jpg/5fa2dd/ffffff"
+  "imageUrl": "http://dummyimage.com/206x188.jpg/5fa2dd/ffffff",
+  "authorId": 9
 }, {
   "title": "Gunnin' for That #1 Spot",
   "publicationDate": "1/11/2004",
@@ -509,7 +554,8 @@ const bookData = [{
   "condition": null,
   "description": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
   "numberSold": 4,
-  "imageUrl": "http://dummyimage.com/213x129.bmp/ff4444/ffffff"
+  "imageUrl": "http://dummyimage.com/213x129.bmp/ff4444/ffffff",
+  "authorId": 9
 }, {
   "title": "Almost Married",
   "publicationDate": "8/11/2000",
@@ -520,7 +566,8 @@ const bookData = [{
   "condition": null,
   "description": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
   "numberSold": 5,
-  "imageUrl": "http://dummyimage.com/171x195.bmp/cc0000/ffffff"
+  "imageUrl": "http://dummyimage.com/171x195.bmp/cc0000/ffffff",
+  "authorId": 9
 }, {
   "title": "Great Texas Dynamite Chase, The",
   "publicationDate": "11/8/2002",
@@ -531,7 +578,8 @@ const bookData = [{
   "condition": null,
   "description": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
   "numberSold": 4,
-  "imageUrl": "http://dummyimage.com/119x224.png/dddddd/000000"
+  "imageUrl": "http://dummyimage.com/119x224.png/dddddd/000000",
+  "authorId": 9
 }, {
   "title": "Hunting Party, The",
   "publicationDate": "3/23/2005",
@@ -542,7 +590,8 @@ const bookData = [{
   "condition": null,
   "description": "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
   "numberSold": 5,
-  "imageUrl": "http://dummyimage.com/156x246.png/5fa2dd/ffffff"
+  "imageUrl": "http://dummyimage.com/156x246.png/5fa2dd/ffffff",
+  "authorId": 9
 }, {
   "title": "Piripäiväkirja",
   "publicationDate": "8/11/2001",
@@ -553,7 +602,90 @@ const bookData = [{
   "condition": null,
   "description": "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
   "numberSold": 2,
-  "imageUrl": "http://dummyimage.com/218x130.png/ff4444/ffffff"
+  "imageUrl": "http://dummyimage.com/218x130.png/ff4444/ffffff",
+  "authorId": 10
 }];
 
-module.exports = { userData, bookData }
+const authorData = [{
+  "id": 1,
+  "firstName": "Mollee",
+  "lastName": "Geke",
+  "DateOfBirth": "8/17/2017",
+  "countryOfOrigin": "Poland",
+  "bio": "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.",
+  "imageUrl": "http://dummyimage.com/250x250.png/ff4444/ffffff"
+}, {
+  "id": 2,
+  "firstName": "Clarey",
+  "lastName": "Lytlle",
+  "DateOfBirth": "3/27/2018",
+  "countryOfOrigin": "Indonesia",
+  "bio": "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\n\nQuisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.\n\nPhasellus in felis. Donec semper sapien a libero. Nam dui.",
+  "imageUrl": "http://dummyimage.com/250x250.png/5fa2dd/ffffff"
+}, {
+  "id": 3,
+  "firstName": "Albrecht",
+  "lastName": "Banishevitz",
+  "DateOfBirth": "6/3/2018",
+  "countryOfOrigin": "Russia",
+  "bio": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.\n\nSed ante. Vivamus tortor. Duis mattis egestas metus.",
+  "imageUrl": "http://dummyimage.com/250x250.png/ff4444/ffffff"
+}, {
+  "id": 4,
+  "firstName": "Bryce",
+  "lastName": "Ormond",
+  "DateOfBirth": "10/29/2017",
+  "countryOfOrigin": "France",
+  "bio": "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.",
+  "imageUrl": "http://dummyimage.com/250x250.png/5fa2dd/ffffff"
+}, {
+  "id": 5,
+  "firstName": "Myrna",
+  "lastName": "Eicke",
+  "DateOfBirth": "3/17/2018",
+  "countryOfOrigin": "Indonesia",
+  "bio": "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
+  "imageUrl": "http://dummyimage.com/250x250.png/cc0000/ffffff"
+}, {
+  "id": 6,
+  "firstName": "Dori",
+  "lastName": "Driffill",
+  "DateOfBirth": "8/6/2017",
+  "countryOfOrigin": "Czech Republic",
+  "bio": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
+  "imageUrl": "http://dummyimage.com/250x250.png/cc0000/ffffff"
+}, {
+  "id": 7,
+  "firstName": "August",
+  "lastName": "Kempe",
+  "DateOfBirth": "10/15/2017",
+  "countryOfOrigin": "Spain",
+  "bio": "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
+  "imageUrl": "http://dummyimage.com/250x250.png/ff4444/ffffff"
+}, {
+  "id": 8,
+  "firstName": "Tally",
+  "lastName": "Lindemann",
+  "DateOfBirth": "11/14/2017",
+  "countryOfOrigin": "Kenya",
+  "bio": "Fusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
+  "imageUrl": "http://dummyimage.com/250x250.png/dddddd/000000"
+}, {
+  "id": 9,
+  "firstName": "Yehudi",
+  "lastName": "Niess",
+  "DateOfBirth": "7/8/2017",
+  "countryOfOrigin": "Indonesia",
+  "bio": "Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
+  "imageUrl": "http://dummyimage.com/250x250.png/5fa2dd/ffffff"
+}, {
+  "id": 10,
+  "firstName": "Kerri",
+  "lastName": "Broske",
+  "DateOfBirth": "6/9/2017",
+  "countryOfOrigin": "Philippines",
+  "bio": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
+  "imageUrl": "http://dummyimage.com/250x250.png/ff4444/ffffff"
+}]
+
+module.exports = { userData, bookData, authorData }
