@@ -25,7 +25,7 @@ export const gotBooks = () => {
 export default function (state = allBooks, action) {
   switch (action.type) {
     case GET_ALL_BOOKS:
-      return action.type
+      return action.books
     default:
       return state
   }
