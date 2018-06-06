@@ -13,9 +13,10 @@ import SingleBook from './components/SingleBook'
  */
 class Routes extends Component {
   componentDidMount() {
+    this.props.loadInitialData()
     this.props.gotBooks()
     this.props.gotAuthors()
-    this.props.loadInitialData()
+
   }
 
   render() {
