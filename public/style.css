@@ -19,3 +19,16 @@ form div {
   margin: 1em;
   display: inline-block;
 }
+
+#allbooks {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bookpreview {
+  width: 30%;
+  margin: 1.5%;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}
