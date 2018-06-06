@@ -9,7 +9,7 @@ const allAuthors = [];
 
 //ACTION CREATORS
 const getAuthors = authors => ({
-  type: GET_ALL_Authors,
+  type: GET_ALL_AUTHORS,
   authors
 })
 
@@ -28,5 +28,6 @@ export default function (state = allAuthors, action) {
       return action.authors
     default:
       return state
+
   }
 }
