@@ -12,6 +12,8 @@ import SingleBook from './components/SingleBook'
  * COMPONENT
  */
 class Routes extends Component {
+
+
   componentDidMount() {
     this.props.loadInitialData()
     this.props.gotBooks()
@@ -21,6 +23,7 @@ class Routes extends Component {
 
   render() {
     const { isLoggedIn } = this.props
+
     console.log(Login)
 
     return (

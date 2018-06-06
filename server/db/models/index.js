@@ -40,6 +40,11 @@ User.hasMany(Address)
 Cart.belongsTo(Address)
 Address.hasMany(Cart)
 
+User.afterCreate(async user => {
+  const cart = await Cart.create({status: "active"})
+  user.addCart(cart)
+})
+
 module.exports = {
   User, Address, Cart, Book, Author, Review, Transaction
 }
