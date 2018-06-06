@@ -7,6 +7,7 @@ import { me } from './store'
 import { gotBooks } from './store/books'
 import { gotAuthors } from './store/authors'
 import SingleBook from './components/SingleBook'
+import AllGenres from './components/AllGenres'
 
 /**
  * COMPONENT
@@ -32,6 +33,7 @@ class Routes extends Component {
           isLoggedIn &&
           <Switch>
             {/* Routes placed here are only available after logging in */}
+            <Route path="/genres" component={AllGenres} />
             <Route path="/books/:bookId" component={SingleBook} />
             {/* <Route path="/home" component={UserHome} /> */}
             <Route path="/home" component={AllBooks} />
