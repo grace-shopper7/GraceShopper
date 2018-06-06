@@ -5,9 +5,9 @@ const BookPreview = props => {
   const book = props.book;
   return (
     <div className="bookpreview">
-      <Link to={`/book/${book.id}`}>
-        <img src={book.imageUrl} />
-        <p>{book.title}</p>
+      <Link to={`/books/${book.id}`}>
+        <img id='book-cover' src={book.imageUrl} />
+        <p id="titles">{book.title}</p>
       </Link>
       <p>
         {book.authorId

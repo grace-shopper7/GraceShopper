@@ -12,11 +12,11 @@ label {
 
 nav a {
   display: inline-block;
-  margin: 1em;
+  margin: 0.5em;
 }
 
 form div {
-  margin: 1em;
+  margin: 0;
   display: inline-block;
 }
 
@@ -26,9 +26,25 @@ form div {
 }
 
 .bookpreview {
+  display: flex;
   width: 30%;
-  margin: 1.5%;
+  margin: 0;
   display: flex;
   flex-direction: column;
   align-items:center;
+  /* justify-content: space-around */
+
+}
+
+
+#titles {
+  font-size: 0.9em;
+  max-width: 10em;
+
+}
+
+
+#book-cover {
+  width: 11em;
+ height: 16em;
 }
