@@ -54,7 +54,7 @@ router.put('/:authorId', async (req, res, next) => {
 router.delete('/:authorId', async (req, res, next) => {
   try {
 
-    await Author.destory({
+    await Author.destroy({
       where: {
         id: req.params.authorId
       }

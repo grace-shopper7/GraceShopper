@@ -27,7 +27,7 @@ class SingleBook extends Component {
 
         <div>
           <h3>{selectedBook.title}</h3>
-          <div>example author name</div>
+          <div>{selectedBook.author.firstName} {selectedBook.author.lastName}</div>
           <div>{`$${selectedBook.price}`}</div>
           <div>{`Date released: ${selectedBook.publicationDate}`}</div>
           <div>{selectedBook.genre}</div>

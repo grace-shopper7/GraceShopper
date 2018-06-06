@@ -42,7 +42,7 @@ Address.hasMany(Cart)
 
 User.afterCreate(async user => {
   const cart = await Cart.create({status: "active"})
-  user.addCart(cart)
+  await user.addCart(cart)
 })
 
 module.exports = {
