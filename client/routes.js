@@ -8,6 +8,7 @@ import { gotBooks } from './store/books'
 import { gotAuthors } from './store/authors'
 import SingleBook from './components/SingleBook'
 import AllGenres from './components/AllGenres'
+import BooksByGenres from './components/BooksByGenres';
 
 /**
  * COMPONENT
@@ -33,6 +34,7 @@ class Routes extends Component {
           isLoggedIn &&
           <Switch>
             {/* Routes placed here are only available after logging in */}
+            <Route path="/genres/:genre" component={BooksByGenres} />
             <Route path="/genres" component={AllGenres} />
             <Route path="/books/:bookId" component={SingleBook} />
             {/* <Route path="/home" component={UserHome} /> */}
