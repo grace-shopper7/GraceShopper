@@ -23,7 +23,8 @@ form div {
 #allbooks {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 0 0 10em;
+  margin-left: 10em;
+  min-width: 10em;
 }
 
 .bookpreview {
@@ -52,7 +53,7 @@ form div {
 
 #sidebar-container {
   display: flex;
-  min-width: 150px;
+  min-width: 10em;
   height: 100%;
   background-color: rgb(0, 89, 96);
   border-right: 1px solid gray;
@@ -65,4 +66,8 @@ form div {
 
 .link-name {
   color: white;
+}
+
+#log-in {
+  text-align: center;
 }
