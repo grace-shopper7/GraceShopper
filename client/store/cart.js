@@ -17,15 +17,27 @@ const loadCarts = (active, previous) => ({
   active
 });
 
-export const getAllCarts = id => {
+export const getAllCarts = userId => {
   return async dispatch => {
-    const { data } = await axios.get(`/api/cart/${id}`);
+    const { data } = await axios.get(`/api/cart/${userId}`);
     console.log(data)
     const active = data.filter(cart => !cart.completed)[0];
     const previous = data.filter(cart => cart.completed);
     dispatch(loadCarts(active, previous));
   };
 };
+
+const addToCart = active => ({
+  type: ADD_ITEM_TO_CART,
+  active
+})
+
+export const addItemToCart = (item, userId) => {
+  return async dispatch => {
+    const { data } = await axios.put(`/api/cart/add/${userId}`, item);
+    dispatch(addToCart(data))
+  }
+}
 
 const cartReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -35,6 +47,8 @@ const cartReducer = (state = initialState, action) => {
         active: action.active,
         previous: action.previous
       };
+    case ADD_ITEM_TO_CART:
+      return {...state, active: action.active}
     default:
       return state;
   }

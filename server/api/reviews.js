@@ -36,7 +36,6 @@ router.put("/:reviewId", async (req, res, next) => {
         id: req.params.reviewId
       }
     });
-
     res.json(review);
   } catch (error) {
     next(error);
@@ -50,7 +49,6 @@ router.delete("/:reviewId", async (req, res, next) => {
         id: req.params.authorId
       }
     });
-
     res.status(204).end();
   } catch (error) {
     next(error);
