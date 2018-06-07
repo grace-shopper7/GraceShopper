@@ -5,7 +5,7 @@ module.exports = router
 
 router.get('/', async (req, res, next) => {
   try {
-    let result = await Book.findAll({include: [Author]});
+    let result = await Book.findAll({include: [{model: Author}]});
     res.json(result)
   } catch (err) {console.log(err)}
 })
