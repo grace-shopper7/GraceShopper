@@ -1,7 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
 import BookPreview from "./BookPreview";
-import {getAllCarts} from '../store/cart'
 
 class AllBooks extends React.Component {
 
@@ -17,8 +16,7 @@ class AllBooks extends React.Component {
 
 const mapState = state => ({
   books: state.books,
-  user: state.user,
-  cart: state.cart.active
+  user: state.user
 });
 
 export default connect(mapState)(AllBooks);

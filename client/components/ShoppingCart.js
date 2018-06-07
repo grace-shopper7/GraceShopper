@@ -6,12 +6,11 @@ class ShoppingCart extends React.Component {
   render() {
     const books = this.props.cart.active ? this.props.cart.active.books : [];
     const id = this.props.user.id;
-    console.log(id)
     return (
       <div id="shoppingcart">
         <div>
           {books ? books.map(book => (
-            <div className="cartitem">
+            <div className="cartitem" key={book.id}>
               <img src={book.imageUrl} />
               <div>
                 <h4>{book.title}</h4>
