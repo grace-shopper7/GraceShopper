@@ -7,6 +7,7 @@ import { me } from './store'
 import { gotBooks } from './store/books'
 import { gotAuthors } from './store/authors'
 import SingleBook from './components/SingleBook'
+import SingleAuthor from './components/SingleAuthor'
 import AllGenres from './components/AllGenres'
 import BooksByGenres from './components/BooksByGenres';
 
@@ -21,10 +22,10 @@ class Routes extends Component {
     this.props.gotBooks()
     this.props.gotAuthors()
 
+
   }
 
   render() {
-    const { isLoggedIn } = this.props
 
     console.log(Login)
 
@@ -38,7 +39,7 @@ class Routes extends Component {
             <Route exact path="/genres" component={AllGenres} />
             <Route exact path="/books/:bookId" component={SingleBook} />
             <Route exact path="/home" component={AllBooks} />
-            {/* <Route exact path="/authors/:authorId" component={BooksByGenres} /> */}
+            <Route exact path="/authors/:authorId" component={SingleAuthor} />
             <Route exact path="/authors" component={AllAuthors} />
             <Route exact path="/" component={AllBooks} />
         {/* Displays our Login component as a fallback */}

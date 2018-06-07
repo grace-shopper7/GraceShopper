@@ -17,9 +17,7 @@ const Navbar = ({ handleClick, isLoggedIn }) => (
             Logout
           </a>
           </div>
-          <div className="navbar-welcome">
           <UserHome />
-          </div>
         </div>
       ) : (
         <div>
