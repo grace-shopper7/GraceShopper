@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { withRouter, Route, Switch, Link } from "react-router-dom";
 import {addItemToCart} from "../store/cart"
 
 /**
@@ -22,7 +23,7 @@ class SingleBook extends Component {
 
 
     return (
-      <div>
+      <div id="single-book-view">
         <div><img src={selectedBook.imageUrl}/></div>
 
         <div>
@@ -36,6 +37,11 @@ class SingleBook extends Component {
         </div>
 
         <button type="submit" onClick={() => this.props.addItem(selectedBook, +this.props.user.id)}>Add to Cart</button>
+        <div id="add-review-button" >
+          <Link to={`/new-review/${bookId}`}>
+            <button type="button">Write a review</button>
+          </Link>
+        </div>
       </div>
     );
   }
