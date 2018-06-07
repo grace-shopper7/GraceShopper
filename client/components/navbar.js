@@ -7,7 +7,7 @@ import { UserHome } from '../components'
 
 const Navbar = ({ handleClick, isLoggedIn }) => (
   <div className='navbar'>
-    <h1>Barnes & Gable</h1>
+    <h1 className="page-header">Barnes & Gable</h1>
     <nav >
       {isLoggedIn ? (
         <div className="navbar-features">

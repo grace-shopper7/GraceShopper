@@ -12,6 +12,13 @@ label {
   display: block;
 }
 
+.navbar {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: -22px;
+}
+
 
 nav a {
   display: inline-block;
@@ -83,6 +90,8 @@ form div {
   border-right: 1px solid gray;
   position: fixed;
   justify-content: center;
+  top: 17.7%
+
 }
 
 #sidebar-links {
@@ -91,6 +100,7 @@ form div {
 
 .link-name {
   color: white;
+  padding: 1px;
 }
 
 #log-in {
@@ -167,4 +177,13 @@ hr {
 .author-name:hover {
   color:orange;
   text-decoration:underline;
+}
+
+.top-link {
+  padding-top: 13px;
+}
+
+.page-header {
+  padding-left: 7px;
+  padding-top: 10px;
 }
