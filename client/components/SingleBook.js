@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { withRouter, Route, Switch } from "react-router-dom";
+import {addItemToCart} from "../store/cart"
 
 /**
  * COMPONENT
@@ -27,13 +28,15 @@ class SingleBook extends Component {
 
         <div>
           <h3>{selectedBook.title}</h3>
-          <div>example author name</div>
+          <div>{selectedBook.author.firstName} {selectedBook.author.lastName}</div>
           <div>{`$${selectedBook.price}`}</div>
           <div>{`Date released: ${selectedBook.publicationDate}`}</div>
           <div>{selectedBook.genre}</div>
           <div>{selectedBook.condition}</div>
           <div>{selectedBook.description}</div>
         </div>
+
+        <button type="submit" onClick={() => this.props.addItem(selectedBook, +this.props.user.id)}>Add to Cart</button>
       </div>
     );
   }
@@ -45,13 +48,18 @@ class SingleBook extends Component {
 
 const mapState = state => {
   return {
-    books: state.books
+    books: state.books,
+    user: state.user
   };
 };
+
+const mapDispatch = dispatch => ({
+  addItem: (book, id) => dispatch(addItemToCart(book, id))
+})
 
 // The `withRouter` wrapper makes sure that updates are not blocked
 // when the url changes
 export default connect(
   mapState,
-  null
+  mapDispatch
 )(SingleBook);

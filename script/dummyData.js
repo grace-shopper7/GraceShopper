@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 const userData = [{ "email": "cradwell0@about.com", "password": "U4lVIvq86kHl", "firstName": "Cheryl", "lastName": "Radwell" },
 { "email": "vrosensaft1@furl.net", "password": "cRUCcZlYkgLN", "firstName": "Valerye", "lastName": "Rosensaft" },
 { "email": "twroth2@pagesperso-orange.fr", "password": "JXDluB4hJcA", "firstName": "Terrill", "lastName": "Wroth" },
