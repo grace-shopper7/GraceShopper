@@ -23,6 +23,9 @@ const Book = db.define('book', {
   },
   genre: {
     type: Sequelize.STRING,
+    get(){
+      return this.getDataValue('genre').split('|')
+    }
   },
   condition: {
     type: Sequelize.ENUM('new', 'used')
