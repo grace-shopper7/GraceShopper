@@ -77,7 +77,7 @@ form div {
 } */
 
 
-#book-cover {
+.book-cover {
   width: 11em;
  height: 16em;
 }
@@ -90,7 +90,7 @@ form div {
   border-right: 1px solid gray;
   position: fixed;
   justify-content: center;
-  top: 17.7%
+  top: 16.8%
 
 }
 
@@ -127,8 +127,21 @@ form div {
   margin: 5%
 }
 
+#shoppingcart {
+  display: flex;
+}
+
+.cartitem {
+  display:flex;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin: 3px 0px;
+  width: 75%
+}
+
 .navbar-features {
   display: flex;
+  align-items: center;
 }
 
 .navbar-links {
@@ -136,10 +149,11 @@ form div {
   align-items: center
 }
 
-.navbar-welcome {
+.navbar-writing {
   flex: 1.2;
-  align-items: center
+
 }
+
 
 .navbar {
   background: linear-gradient(
@@ -148,7 +162,9 @@ form div {
     #74BBFB,
     rgb(114, 180, 230)
   );
-  border: none
+  border: none;
+  height: 128px;
+  z-index: 2
 }
 
 hr {
