@@ -17,7 +17,8 @@ class AllBooks extends React.Component {
 
 const mapState = state => ({
   books: state.books,
-  user: state.user
+  user: state.user,
+  cart: state.cart.active
 });
 
 export default connect(mapState)(AllBooks);

@@ -1,5 +1,4 @@
 import axios from "axios";
-import store from "./index";
 
 const LOAD_CARTS = "LOAD_CARTS";
 const ADD_ITEM_TO_CART = "ADD_ITEM_TO_CART";
@@ -33,13 +32,6 @@ const checkout = (active, previous) => ({
   active,
   previous
 });
-
-export const initializeCarts = async userId => {
-  const { data } = await axios.get(`/api/cart/${userId}`);
-  const active = data.filter(cart => !cart.completed)[0];
-  const previous = data.filter(cart => cart.completed);
-  store.dispatch(loadCarts(active, previous));
-};
 
 export const getAllCarts = userId => {
   return async dispatch => {

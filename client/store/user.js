@@ -1,6 +1,6 @@
 import axios from 'axios'
 import history from '../history'
-import {initializeCarts} from './cart'
+import { getAllCarts } from './cart'
 
 /**
  * ACTION TYPES
@@ -27,7 +27,7 @@ export const me = () =>
     axios.get('/auth/me')
       .then(res => {
         dispatch(getUser(res.data || defaultUser))
-        // if (res.data) initializeCarts(res.data.id)
+        if (res.data.id) dispatch(getAllCarts(res.data.id))
       })
       .catch(err => console.log(err))
 
@@ -36,7 +36,7 @@ export const auth = (email, password, method) =>
     axios.post(`/auth/${method}`, { email, password })
       .then(res => {
         dispatch(getUser(res.data))
-        // initializeCarts(res.data.id)
+        if (res.data.id) dispatch(getAllCarts(res.data.id))
         history.push('/books')
       }, authError => { // rare example: a good use case for parallel (non-catch) error handler
         dispatch(getUser({error: authError}))
