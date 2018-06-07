@@ -127,6 +127,18 @@ form div {
   margin: 5%
 }
 
+#shoppingcart {
+  display: flex;
+}
+
+.cartitem {
+  display:flex;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  margin: 3px 0px;
+  width: 75%
+}
+
 .navbar-features {
   display: flex;
   align-items: center;

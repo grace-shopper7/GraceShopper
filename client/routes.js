@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { withRouter, Route, Switch } from 'react-router-dom'
 import PropTypes from 'prop-types'
-import { Login, Signup, UserHome, AllBooks, AllAuthors } from './components'
+import { Login, Signup, AllBooks, AllAuthors, ShoppingCart } from './components'
 import { me } from './store'
 import { gotBooks } from './store/books'
 import { gotAuthors } from './store/authors'
@@ -21,14 +21,10 @@ class Routes extends Component {
     this.props.loadInitialData()
     this.props.gotBooks()
     this.props.gotAuthors()
-
-
   }
 
   render() {
-
     console.log(Login)
-
     return (
       <Switch>
         {/* Routes placed here are available to all visitors */}
@@ -40,6 +36,8 @@ class Routes extends Component {
             <Route exact path="/books/:bookId" component={SingleBook} />
             <Route exact path="/home" component={AllBooks} />
             <Route exact path="/authors/:authorId" component={SingleAuthor} />
+            <Route exact path="/cart" component={ShoppingCart} />
+            {/* <Route exact path="/authors/:authorId" component={BooksByGenres} /> */}
             <Route exact path="/authors" component={AllAuthors} />
             <Route exact path="/" component={AllBooks} />
         {/* Displays our Login component as a fallback */}
