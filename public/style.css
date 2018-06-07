@@ -187,3 +187,15 @@ hr {
   padding-left: 7px;
   padding-top: 10px;
 }
+
+#single-book-view {
+  text-align: center;
+}
+
+#review-form-container{
+  text-align: center;
+}
+
+#review-submit-button {
+  text-align: center;
+}

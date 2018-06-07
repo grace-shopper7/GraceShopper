@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { withRouter, Route, Switch } from 'react-router-dom'
 import PropTypes from 'prop-types'
-import { Login, Signup, UserHome, AllBooks, AllAuthors } from './components'
+import { Login, Signup, UserHome, AllBooks, AllAuthors, AddReviewForm } from './components'
 import { me } from './store'
 import { gotBooks } from './store/books'
 import { gotAuthors } from './store/authors'
@@ -37,6 +37,7 @@ class Routes extends Component {
             <Route exact path="/genres/:genre" component={BooksByGenres} />
             <Route exact path="/genres" component={AllGenres} />
             <Route exact path="/books/:bookId" component={SingleBook} />
+            <Route exact path="/new-review/:bookId" component={AddReviewForm} />
             <Route exact path="/home" component={AllBooks} />
             {/* <Route exact path="/authors/:authorId" component={BooksByGenres} /> */}
             <Route exact path="/authors" component={AllAuthors} />
