@@ -1,5 +1,5 @@
 import axios from "axios";
-import store from './index'
+import store from "./index";
 
 const LOAD_CARTS = "LOAD_CARTS";
 const ADD_ITEM_TO_CART = "ADD_ITEM_TO_CART";
@@ -14,26 +14,32 @@ const initialState = {
 
 const loadCarts = (active, previous) => ({
   type: LOAD_CARTS,
-  previous,
-  active
+  active,
+  previous
 });
 
 const addToCart = active => ({
   type: ADD_ITEM_TO_CART,
   active
-})
+});
 
 const removeFromCart = active => ({
   type: REMOVE_ITEM_FROM_CART,
   active
-})
+});
+
+const checkout = (active, previous) => ({
+  type: CHECKOUT,
+  active,
+  previous
+});
 
 export const initializeCarts = async userId => {
   const { data } = await axios.get(`/api/cart/${userId}`);
   const active = data.filter(cart => !cart.completed)[0];
   const previous = data.filter(cart => cart.completed);
   store.dispatch(loadCarts(active, previous));
-}
+};
 
 export const getAllCarts = userId => {
   return async dispatch => {
@@ -47,16 +53,23 @@ export const getAllCarts = userId => {
 export const addItemToCart = (item, userId) => {
   return async dispatch => {
     const { data } = await axios.put(`/api/cart/add/${userId}`, item);
-    dispatch(addToCart(data))
-  }
-}
+    dispatch(addToCart(data));
+  };
+};
 
 export const removeItemFromCart = (item, userId) => {
   return async dispatch => {
     const { data } = await axios.put(`/api/cart/remove/${userId}`, item);
-    dispatch(removeFromCart(data))
-  }
-}
+    dispatch(removeFromCart(data));
+  };
+};
+
+export const checkoutCart = userId => {
+  return async dispatch => {
+    const { data } = await axios.put(`/api/cart/checkout/${userId}`);
+    dispatch(checkout(data.active, data.previous));
+  };
+};
 
 const cartReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -67,9 +80,15 @@ const cartReducer = (state = initialState, action) => {
         previous: action.previous
       };
     case ADD_ITEM_TO_CART:
-      return {...state, active: action.active}
+      return { ...state, active: action.active };
     case REMOVE_ITEM_FROM_CART:
-      return {...state, active: action.active}
+      return { ...state, active: action.active };
+    case CHECKOUT:
+      return {
+        ...state,
+        active: action.active,
+        previous: action.previous
+      };
     default:
       return state;
   }
