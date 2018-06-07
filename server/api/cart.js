@@ -1,14 +1,14 @@
 const router = require("express").Router();
-const { Cart, Book, User } = require("../db/models");
+const { Cart, Book, User, Author } = require("../db/models");
 module.exports = router;
 
 router.get("/:id", async (req, res, next) => {
   try {
-    const cart = await Cart.findAll({
-      where: { id: req.params.id },
-      include: [Book]
+    const carts = await Cart.findAll({
+      where: { userId: req.params.id },
+      include: [{model: Book, include: [Author], required: false}]
     });
-    res.json(cart);
+    res.json(carts);
   } catch (err) {
     console.log(err);
   }
@@ -17,13 +17,13 @@ router.get("/:id", async (req, res, next) => {
 router.put("/add/:id", async (req, res, next) => {
   try {
     let activeCart = await Cart.findOne({
-      where: { id: req.params.id, completed: false },
+      where: { userId: req.params.id, completed: false },
       include: [Book]
     });
     const book = await Book.findOne({ where: { id: req.body.id } });
     await activeCart.addBook(book);
     activeCart = await Cart.findOne({
-      where: { id: req.params.id, completed: false },
+      where: { userId: req.params.id, completed: false },
       include: [Book]
     });
     res.json(activeCart);
@@ -35,12 +35,12 @@ router.put("/add/:id", async (req, res, next) => {
 router.put("/remove/:id", async (req, res, next) => {
   try {
     let activeCart = await Cart.findOne({
-      where: { id: req.params.id, completed: false }
+      where: { userId: req.params.id, completed: false }
     });
     const book = await Book.findOne({ where: { id: req.body.id } });
     await activeCart.removeBook(book);
     activeCart = await Cart.findOne({
-      where: { id: req.params.id, completed: false },
+      where: { userId: req.params.id, completed: false },
       include: [Book]
     });
     res.json(activeCart);
@@ -51,13 +51,14 @@ router.put("/remove/:id", async (req, res, next) => {
 
 router.put("/checkout/:id", async (req, res, next) => {
   const activeCart = await Cart.findOne({
-    where: { id: req.params.id, completed: false }
+    where: { userId: req.params.id, completed: false }
   });
   await activeCart.update({ completed: true, status: "Shippped" });
   const user = await User.findById(req.params.id);
-  const previous = user.getCarts();
+  const previous = await user.getCarts();
   const active = await Cart.create({ status: "active" });
   await user.addCart(active);
+  console.log(active)
   res.json({previous, active});
 });
 
