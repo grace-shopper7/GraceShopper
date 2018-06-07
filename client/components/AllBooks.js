@@ -8,7 +8,7 @@ class AllBooks extends React.Component {
   render() {
     const books = this.props.books ? this.props.books : [];
     return (
-      <div id="allbooks">
+      <div className="allbooks">
         {books.map(book => <BookPreview key={book.id} book={book} />)}
       </div>
     );

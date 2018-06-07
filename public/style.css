@@ -1,5 +1,7 @@
 body {
   font-family: sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -9,6 +11,14 @@ a {
 label {
   display: block;
 }
+
+.navbar {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: -22px;
+}
+
 
 nav a {
   display: inline-block;
@@ -20,7 +30,7 @@ form div {
   display: inline-block;
 }
 
-#allbooks {
+.allbooks {
   display: flex;
   flex-wrap: wrap;
   margin-left: 10em;
@@ -31,19 +41,40 @@ form div {
   display: flex;
   width: 30%;
   margin: 0;
-  display: flex;
   flex-direction: column;
   align-items:center;
-  /* justify-content: space-around */
+  padding-top: 10px
 
 }
 
 
-#titles {
+.book-titles {
   font-size: 0.9em;
   max-width: 10em;
+  color: black;
+  align-items: flex-start;
+
 
 }
+
+.books-author {
+  font-size: 0.9em;
+  max-width: 10em;
+  padding-bottom: 15px;
+  padding-top: 6px;
+}
+
+
+
+.book-titles:hover {
+  color:orange;
+  text-decoration:underline;
+
+}
+
+/* .author-name:hover {
+  color: orange
+} */
 
 
 #book-cover {
@@ -59,6 +90,8 @@ form div {
   border-right: 1px solid gray;
   position: fixed;
   justify-content: center;
+  top: 17.7%
+
 }
 
 #sidebar-links {
@@ -67,13 +100,14 @@ form div {
 
 .link-name {
   color: white;
+  padding: 1px;
 }
 
 #log-in {
   text-align: center;
 }
 
-#allGenres {
+.allGenres {
   text-align: center;
   margin: 0 0 0 5em;
 }
@@ -86,10 +120,70 @@ form div {
   text-align: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   width: 90%;
 }
 
 #books-container {
   margin: 5%
+}
+
+.navbar-features {
+  display: flex;
+}
+
+.navbar-links {
+  flex: 3;
+  align-items: center
+}
+
+.navbar-welcome {
+  flex: 1.2;
+  align-items: center
+}
+
+.navbar {
+  background: linear-gradient(
+    #62B1F6,
+    #63B8FF,
+    #74BBFB,
+    rgb(114, 180, 230)
+  );
+  border: none
+}
+
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+.link-name:hover {
+  color:orange;
+  text-decoration:underline;
+}
+
+.all-authors {
+  display: flex;
+  flex-wrap: wrap
+}
+
+.author-preview {
+  padding: 10px;
+  margin-left: 10em;
+  min-width: 10em;
+}
+
+
+
+.author-name:hover {
+  color:orange;
+  text-decoration:underline;
+}
+
+.top-link {
+  padding-top: 13px;
+}
+
+.page-header {
+  padding-left: 7px;
+  padding-top: 10px;
 }

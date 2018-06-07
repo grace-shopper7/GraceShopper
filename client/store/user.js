@@ -29,6 +29,7 @@ export const me = () =>
         dispatch(getUser(res.data || defaultUser))
         if (res.data.id) dispatch(getAllCarts(res.data.id))
       })
+    })
       .catch(err => console.log(err))
 
 export const auth = (email, password, method) =>

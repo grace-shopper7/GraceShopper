@@ -9,11 +9,11 @@ const BookPreview = props => {
         <img className='book-cover' src={book.imageUrl} />
         <p className="titles">{book.title}</p>
       </Link>
-      <p>
+      <div className="books-author">
         {book.authorId
           ? `By ${book.author.firstName} ${book.author.lastName}`
           : null}
-      </p>
+      </div>
     </div>
   );
 };
