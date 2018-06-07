@@ -16,7 +16,7 @@ class AllGenres extends React.Component {
     let unique = genreArr.filter(onlyUnique).sort()
 
     return (
-      <div id="allGenres">
+      <div className="allGenres">
         {unique.map((genre) =>
         <div key={genre}>
           <Link to={`/genres/${genre}`}>{genre}</Link>

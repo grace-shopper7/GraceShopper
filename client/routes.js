@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { withRouter, Route, Switch } from 'react-router-dom'
 import PropTypes from 'prop-types'
-import { Login, Signup, UserHome, AllBooks } from './components'
+import { Login, Signup, UserHome, AllBooks, AllAuthors } from './components'
 import { me } from './store'
 import { gotBooks } from './store/books'
 import { gotAuthors } from './store/authors'
@@ -34,14 +34,14 @@ class Routes extends Component {
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
             {/* Routes placed here are only available after logging in */}
-            <Route path="/genres/:genre" component={BooksByGenres} />
-            <Route path="/genres" component={AllGenres} />
-            <Route path="/books/:bookId" component={SingleBook} />
-            {/* <Route path="/home" component={UserHome} /> */}
-            <Route path="/home" component={AllBooks} />
-            <Route path="/" component={AllBooks} />
+            <Route exact path="/genres/:genre" component={BooksByGenres} />
+            <Route exact path="/genres" component={AllGenres} />
+            <Route exact path="/books/:bookId" component={SingleBook} />
+            <Route exact path="/home" component={AllBooks} />
+            {/* <Route exact path="/authors/:authorId" component={BooksByGenres} /> */}
+            <Route exact path="/authors" component={AllAuthors} />
+            <Route exact path="/" component={AllBooks} />
         {/* Displays our Login component as a fallback */}
-        <Route component={Login} />
       </Switch>
     )
   }
