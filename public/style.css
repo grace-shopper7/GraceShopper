@@ -53,11 +53,12 @@ form div {
 
 #sidebar-container {
   display: flex;
-  min-width: 10em;
+  min-width: 7em;
   height: 100%;
   background-color: rgb(0, 89, 96);
   border-right: 1px solid gray;
   position: fixed;
+  justify-content: center;
 }
 
 #sidebar-links {
@@ -74,6 +75,7 @@ form div {
 
 #allGenres {
   text-align: center;
+  margin: 0 0 0 5em;
 }
 
 #genre-param {
@@ -82,4 +84,12 @@ form div {
 
 #books-by-genres {
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+}
+
+#books-container {
+  margin: 5%
 }
