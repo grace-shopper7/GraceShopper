@@ -29,7 +29,12 @@ class AddReviewForm extends React.Component {
 
     return (
       <div id="review-form-container">
-        <h3>{`Tell us about ${currentBook[0].title} by ${currentBook[0].author.firstName} ${currentBook[0].author.lastName}`}</h3>
+        <h2>Tell us about</h2>
+        <div className="book-cover">
+          <img src={currentBook[0].imageUrl} />
+        </div>
+        <h3>{`${currentBook[0].title} by ${currentBook[0].author.firstName} ${currentBook[0].author.lastName}`}
+        </h3>
         <form id="review-form" >
           <label htmlFor="rating"> Rating </label>
             <select>
