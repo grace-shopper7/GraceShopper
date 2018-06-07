@@ -4,13 +4,6 @@ import BookPreview from "./BookPreview";
 import {getAllCarts} from '../store/cart'
 
 class AllBooks extends React.Component {
-  // // constructor(props) {
-  // //   super(props);
-  // // }
-
-  componentDidMount(){
-    if (this.props.user) this.props.getAllCarts(this.props.user.id)
-  }
 
   render() {
     const books = this.props.books ? this.props.books : [];
@@ -27,8 +20,4 @@ const mapState = state => ({
   user: state.user
 });
 
-const mapDispatch = dispatch => ({
-  getAllCarts: id => dispatch(getAllCarts(id))
-})
-
-export default connect(mapState, mapDispatch)(AllBooks);
+export default connect(mapState)(AllBooks);
