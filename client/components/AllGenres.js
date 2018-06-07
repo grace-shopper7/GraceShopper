@@ -1,13 +1,12 @@
 import React from "react";
 import { connect } from "react-redux";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom"
 
 class AllGenres extends React.Component {
   render() {
     let genreArr = [];
-    let grabGenres = this.props.books.map((books) => {
-      let bookGenre = books.genre.split('|')
-      genreArr = genreArr.concat(bookGenre)
+    this.props.books.map(book => {
+      genreArr = genreArr.concat(book.genre);
     })
 
     const onlyUnique = (value, index, self) => {
@@ -18,10 +17,10 @@ class AllGenres extends React.Component {
     return (
       <div className="allGenres">
         {unique.map((genre) =>
-        <div key={genre}>
-          <Link to={`/genres/${genre}`}>{genre}</Link>
-        </div>
-      )}
+          <div key={genre}>
+            <Link to={`/genres/${genre}`}>{genre}</Link>
+          </div>
+        )}
       </div>
     )
   }
