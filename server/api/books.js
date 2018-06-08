@@ -1,10 +1,10 @@
 const router = require("express").Router();
-const { Book, Author, Review } = require("../db/models");
+const { Book, Author, Review, User } = require("../db/models");
 module.exports = router;
 
 router.get("/", async (req, res, next) => {
   try {
-    let result = await Book.findAll({ include: [Author, Review] });
+    let result = await Book.findAll({ include: [Author, {model: Review, include: [User]}] });
     res.json(result);
   } catch (err) {
     console.log(err);

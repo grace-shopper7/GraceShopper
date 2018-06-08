@@ -30,7 +30,7 @@ class SingleBook extends Component {
           <h3>{selectedBook.title}</h3>
           {reviews.length ? (
             <h3>
-              {`${reviews.reduce((acc, review) => acc + review.rating, 0) /
+              {`$${reviews.reduce((acc, review) => acc + review.rating, 0) /
                 reviews.length} / 5`}
             </h3>
           ) : null}
@@ -58,7 +58,7 @@ class SingleBook extends Component {
         <div id="bookreviews">
           {reviews.filter(review => review.text).map(review => (
             <div className="review" key={review.id}>
-              <h4>{`${review.rating} / 5`}</h4>
+              <h4>{`${review.user.firstName} ${review.user.lastName}: ${review.rating} / 5`}</h4>
               <p>{review.text}</p>
             </div>
           ))}
