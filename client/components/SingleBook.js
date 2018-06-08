@@ -28,8 +28,12 @@ class SingleBook extends Component {
 
         <div>
           <h3>{selectedBook.title}</h3>
-          <h3>{`${reviews.reduce((acc, review) => acc + review.rating, 0) /
-            reviews.length} / 5`}</h3>
+          {reviews.length ? (
+            <h3>
+              {`${reviews.reduce((acc, review) => acc + review.rating, 0) /
+                reviews.length} / 5`}
+            </h3>
+          ) : null}
           <div>
             {selectedBook.author.firstName} {selectedBook.author.lastName}
           </div>
