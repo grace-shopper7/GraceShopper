@@ -2,7 +2,7 @@
 
 const { userData, bookData, authorData, reviewData} = require("./dummyData");
 const db = require("../server/db");
-const { User, Book, Author } = require("../server/db/models");
+const { User, Book, Author, Review } = require("../server/db/models");
 
 /**
  * Welcome to the seed file! This seed file uses a newer language feature called...
@@ -24,11 +24,13 @@ async function seed() {
   const users = await Promise.all(userData.map(user => User.create(user)));
   const authors = await Promise.all(authorData.map(author => Author.create(author)));
   const books = await Promise.all(bookData.map(book => Book.create(book)));
+  const reviews = await Promise.all(reviewData.map(review => Review.create(review)));
   // Wowzers! We can even `await` on the right-hand side of the assignment operator
   // and store the result that the promise resolves to in a variable! This is nice!
   console.log(`seeded ${users.length} users`);
   console.log(`seeded ${books.length} books`);
   console.log(`seeded ${authors.length} authors`);
+  console.log(`seeded ${reviews.length} reviews`);
   console.log(`seeded successfully`);
 }
 
