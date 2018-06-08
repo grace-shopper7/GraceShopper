@@ -1292,5 +1292,4 @@ const reviewData = [{
   "userId": 1
 }]
 
-
 module.exports = { userData, bookData, authorData, reviewData }
