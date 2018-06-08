@@ -1,12 +1,13 @@
 import React from "react";
 import { connect } from "react-redux";
 import { removeItemFromCart, checkoutCart } from "../store/cart";
+import { convertPrice } from "../store/books";
 
 class ShoppingCart extends React.Component {
   render() {
     const books = this.props.cart.active ? this.props.cart.active.books : [];
     const id = this.props.user.id;
-    console.log(books);
+    const user = this.props.user;
     return (
       <div id="shoppingcart">
         <div>
@@ -19,7 +20,7 @@ class ShoppingCart extends React.Component {
                     <h5>
                       `{book.author.firstName} {book.author.lastName}`
                     </h5>
-                    <h3>{`$${book.price}`}</h3>
+                    <h3>{`$${convertPrice(book.price)}`}</h3>
                   </div>
                   <button
                     type="submit"
@@ -33,10 +34,12 @@ class ShoppingCart extends React.Component {
         </div>
         <div id="cartoptions">
           {books && books.length ? (
-            <div>{`Total: ${books.reduce(
-              (acc, book) => acc + book.price,
-              0
+            <div>{`Total: ${convertPrice(
+              books.reduce((acc, book) => acc + book.price, 0)
             )}`}</div>
+          ) : null}
+          {user.firstName ? (
+            <div>{`${user.firstName} ${user.lastName}`}</div>
           ) : null}
           <button type="submit" onClick={() => this.props.checkout(id)}>
             Checkout
