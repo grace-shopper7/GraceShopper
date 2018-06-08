@@ -1,6 +1,6 @@
 "use strict";
 
-const { userData, bookData, authorData, reviewData} = require("./dummyData");
+const { userData, bookData, authorData, reviewData } = require("./dummyData");
 const db = require("../server/db");
 const { User, Book, Author, Review } = require("../server/db/models");
 
