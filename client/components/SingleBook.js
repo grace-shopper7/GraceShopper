@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { withRouter, Route, Switch, Link } from "react-router-dom";
 import { addItemToCart } from "../store/cart";
+import { convertPrice } from "../store/books";
 
 /**
  * COMPONENT
@@ -30,14 +31,14 @@ class SingleBook extends Component {
           <h3>{selectedBook.title}</h3>
           {reviews.length ? (
             <h3>
-              {`$${reviews.reduce((acc, review) => acc + review.rating, 0) /
+              {`${reviews.reduce((acc, review) => acc + review.rating, 0) /
                 reviews.length} / 5`}
             </h3>
           ) : null}
           <div>
             {selectedBook.author.firstName} {selectedBook.author.lastName}
           </div>
-          <div>{`$${selectedBook.price}`}</div>
+          <div>{`$${convertPrice(selectedBook.price)}`}</div>
           <div>{`Date released: ${selectedBook.publicationDate}`}</div>
           <div>{selectedBook.genre.join(", ")}</div>
           <div>{selectedBook.condition}</div>

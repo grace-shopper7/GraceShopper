@@ -13,6 +13,10 @@ const getBooks = books => ({
   books
 })
 
+export const convertPrice = (price) => {
+  return parseFloat(Math.round(price * 100) / 100).toFixed(2);
+}
+
 //THUNK CREATORS
 export const gotBooks = () => {
   return async dispatch => {
