@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+// import { Link } from 'react-router-dom';
 import { addedReview } from '../store/reviews'
 
 class AddReviewForm extends React.Component {
@@ -20,7 +21,7 @@ class AddReviewForm extends React.Component {
       bookId,
       userId
     }
-    this.props.addReview(formData)
+    this.props.addReview(formData, bookId)
     this.props.history.push(`/books/${bookId}`)
   }
 
@@ -41,7 +42,7 @@ class AddReviewForm extends React.Component {
         </div>
         <h3>{`${currentBook[0].title} by ${currentBook[0].author.firstName} ${currentBook[0].author.lastName}`}
         </h3>
-        <form id="review-form" >
+        <form id="review-form" onSubmit={this.handleSubmit}>
           <label htmlFor="rating"> Rating </label>
             <select name="rating">
               <option value="1">1</option>
@@ -70,7 +71,7 @@ const mapState = state => {
 
 const mapDispatch = dispatch => {
   return {
-    addReview: (formData) => dispatch(addedReview(formData))
+    addReview: (formData, bookId) => dispatch(addedReview(formData, bookId))
   }
 }
 

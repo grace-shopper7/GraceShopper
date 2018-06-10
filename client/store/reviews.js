@@ -20,8 +20,9 @@ const getUserReviews = reviews => ({
   reviews
 })
 
-const addReview = review => ({
+const addReview = (review, bookId) => ({
   type: ADD_REVIEW,
+  bookId,
   review
 })
 
@@ -45,10 +46,10 @@ export const gotUserReviews = (user) => {
   }
 }
 
-export const addedReview = (formData) => {
+export const addedReview = (formData, bookId) => {
   return async dispatch => {
     const { data } = await axios.post('/api/reviews', formData)
-    dispatch(addReview(data))
+    dispatch(addReview(data, bookId))
   }
 }
 
