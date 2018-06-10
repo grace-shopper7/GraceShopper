@@ -1,21 +1,33 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { addedReview } from '../store/reviews'
 
 class AddReviewForm extends React.Component {
   constructor () {
     super()
-    // this.handleSubmit = this.handleSubmit.bind(this);
-    this.redirectToBook = this.redirectToBook.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    // this.redirectToBook = this.redirectToBook.bind(this);
   }
 
-  // handleSubmit (event) {
-  //   event.preventDefault();
-  //   this.props.history.push(`/books/${this.props.match.params.studentId}`)
+  handleSubmit (event) {
+    event.preventDefault();
+    let rating = event.target.rating.value;
+    let text = event.target.text.value;
+    let bookId = this.props.match.params.bookId;
+    let userId = this.props.userId;
+    let formData = {
+      rating,
+      text,
+      bookId,
+      userId
+    }
+    this.props.addedReview(formData)
+    this.props.history.push(`/books/${+this.props.match.params.bookId}`)
+  }
+
+  // redirectToBook () {
+  //   this.props.history.push(`/books/${this.props.match.params.bookId}`)
   // }
-
-  redirectToBook () {
-    this.props.history.push(`/books/${this.props.match.params.bookId}`)
-  }
 
   render () {
     if (this.props.books.length === 0){
@@ -25,7 +37,6 @@ class AddReviewForm extends React.Component {
     let currentBook = this.props.books.filter((book) => {
       return (book.id === +this.props.match.params.bookId)
     })
-    console.log(currentBook[0])
 
     return (
       <div id="review-form-container">
@@ -37,7 +48,7 @@ class AddReviewForm extends React.Component {
         </h3>
         <form id="review-form" >
           <label htmlFor="rating"> Rating </label>
-            <select>
+            <select name="rating">
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="1">3</option>
@@ -47,7 +58,7 @@ class AddReviewForm extends React.Component {
           <label htmlFor="text"> Description </label>
             <textarea name="text" > Enter text here...</textarea>
           <div id="review-submit-button">
-            <button type="button" onClick={this.redirectToBook}>Submit</button>
+            <button type="submit" >Submit</button>
           </div>
         </form>
       </div>
@@ -57,8 +68,15 @@ class AddReviewForm extends React.Component {
 
 const mapState = state => {
   return {
-    books: state.books
+    books: state.books,
+    userId: state.user.id
   }
 }
 
-export default connect(mapState, null)(AddReviewForm)
+const mapDispatch = dispatch => {
+  return {
+    addedReview: (formData) => dispatch(addedReview(formData))
+  }
+}
+
+export default connect(mapState, mapDispatch)(AddReviewForm)

@@ -4,6 +4,7 @@ import history from '../history'
 // ACTION TYPES
 const GET_ALL_REVIEWS = 'GET_ALL_REVIEWS'
 const GET_ALL_USER_REVIEWS = 'GET_ALL_USER_REVIEWS'
+const ADD_REVIEW = 'ADD_REVIEW'
 
 // INITIAL STATE
 const allReviews = [];
@@ -17,6 +18,11 @@ const getAllReviews = reviews => ({
 const getUserReviews = reviews => ({
   type: GET_ALL_USER_REVIEWS,
   reviews
+})
+
+const addReview = review => ({
+  type: ADD_REVIEW,
+  review
 })
 
 //THUNK CREATORS
@@ -39,6 +45,13 @@ export const gotUserReviews = (user) => {
   }
 }
 
+export const addedReview = (formData) => {
+  return async dispatch => {
+    const { data } = await axios.post('/api/reviews', formData)
+    dispatch(addReview(data))
+  }
+}
+
 // REDUCER
 export default function (state = allReviews, action) {
   switch (action.type) {
@@ -46,6 +59,8 @@ export default function (state = allReviews, action) {
       return action.reviews
     case GET_ALL_USER_REVIEWS:
       return action.reviews
+    case ADD_REVIEW:
+      return [...state, action.review]
     default:
       return state
   }
