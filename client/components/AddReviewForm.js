@@ -6,7 +6,6 @@ class AddReviewForm extends React.Component {
   constructor () {
     super()
     this.handleSubmit = this.handleSubmit.bind(this);
-    // this.redirectToBook = this.redirectToBook.bind(this);
   }
 
   handleSubmit (event) {
@@ -14,20 +13,16 @@ class AddReviewForm extends React.Component {
     let rating = event.target.rating.value;
     let text = event.target.text.value;
     let bookId = this.props.match.params.bookId;
-    let userId = this.props.userId;
+    let userId = this.props.user.id;
     let formData = {
       rating,
       text,
       bookId,
       userId
     }
-    this.props.addedReview(formData)
-    this.props.history.push(`/books/${+this.props.match.params.bookId}`)
+    this.props.addReview(formData)
+    this.props.history.push(`/books/${bookId}`)
   }
-
-  // redirectToBook () {
-  //   this.props.history.push(`/books/${this.props.match.params.bookId}`)
-  // }
 
   render () {
     if (this.props.books.length === 0){
@@ -69,13 +64,13 @@ class AddReviewForm extends React.Component {
 const mapState = state => {
   return {
     books: state.books,
-    userId: state.user.id
+    user: state.user
   }
 }
 
 const mapDispatch = dispatch => {
   return {
-    addedReview: (formData) => dispatch(addedReview(formData))
+    addReview: (formData) => dispatch(addedReview(formData))
   }
 }
 
