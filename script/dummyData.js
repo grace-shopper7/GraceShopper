@@ -563,12 +563,12 @@ const bookData = [{
   "publicationDate": "8/11/2000",
   "publisher": "Waters-Hand",
   "quantity": 1,
-  "price": 7423,
+  "price": 74.23,
   "genre": "Comedy",
   "condition": null,
   "description": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
   "numberSold": 5,
-  "imageUrl": "http://dummyimage.com/171x195.bmp/cc0000/ffffff",
+  "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfTs4ndMFhAZhzYQH9Rre42Ft6wORL5TmXjDvWKZZHcbjhwfjzbg",
   "authorId": 9
 }, {
   "title": "Great Texas Dynamite Chase, The",
