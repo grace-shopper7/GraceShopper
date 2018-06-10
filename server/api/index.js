@@ -3,7 +3,7 @@ module.exports = router;
 
 router.use('/users', require('./users'))
 router.use('/books', require('./books'))
-
+router.use('/addresses', require('./addresses'))
 router.use('/authors', require('./authors'))
 router.use('/reviews', require('./reviews'))
 router.use('/cart', require('./cart'))
