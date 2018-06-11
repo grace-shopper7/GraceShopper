@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { withRouter, Route, Switch } from 'react-router-dom'
 import PropTypes from 'prop-types'
-import { Login, Signup, AllBooks, AllAuthors, AddReviewForm, ShoppingCart } from './components'
+import { Login, Signup, AllBooks, AllAuthors, AddReviewForm, ShoppingCart, PreviousPurchases } from './components'
 import { me } from './store'
 import { gotBooks } from './store/books'
 import { gotAuthors } from './store/authors'
@@ -38,6 +38,7 @@ class Routes extends Component {
             <Route exact path="/home" component={AllBooks} />
             <Route exact path="/authors/:authorId" component={SingleAuthor} />
             <Route exact path="/cart" component={ShoppingCart} />
+            <Route exact path="/history" component={PreviousPurchases} />
             {/* <Route exact path="/authors/:authorId" component={BooksByGenres} /> */}
             <Route exact path="/authors" component={AllAuthors} />
             <Route exact path="/" component={AllBooks} />
