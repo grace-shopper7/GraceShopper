@@ -110,6 +110,14 @@ form div {
   text-align: center;
 }
 
+#books-by-genres {
+  display: flex;
+  margin-left: 200px;
+  height: 500px;
+  width: auto;
+  position: relative;
+}
+
 #books-container {
   margin: 5%
 }

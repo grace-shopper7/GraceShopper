@@ -17,8 +17,7 @@ const Book = db.define("book", {
     type: Sequelize.INTEGER
   },
   price: {
-    type: Sequelize.INTEGER,
-    // JavaScript will do weird things to floating numbers, so let's make type of the price attribute integer and divide any price by 100 when we actually render it to users
+    type: Sequelize.FLOAT,
     get() {
       return this.getDataValue("price") / 100;
     },

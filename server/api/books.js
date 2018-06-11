@@ -4,10 +4,10 @@ module.exports = router;
 
 router.get("/", async (req, res, next) => {
   try {
-    let result = await Book.findAll({ include: [Author, {model: Review, include: [User]}] });
+    let result = await Book.findAll({ include: [Author, { model: Review, include: [User] }] });
     res.json(result);
   } catch (err) {
-    console.log(err);
+    next(err);
   }
 });
 
@@ -21,7 +21,7 @@ router.get("/:bookId", async (req, res, next) => {
     });
     res.json(result);
   } catch (err) {
-    console.log(err);
+    next(err);
   }
 });
 
@@ -30,7 +30,7 @@ router.post("/", async (req, res, next) => {
     let newBook = await Book.create(req.body);
     res.json(newBook);
   } catch (err) {
-    console.log(err);
+    next(err);
   }
 });
 
@@ -43,7 +43,7 @@ router.put("/:bookId", async (req, res, next) => {
     });
     res.json(updatedBook);
   } catch (err) {
-    console.log(err);
+    next(err);
   }
 });
 

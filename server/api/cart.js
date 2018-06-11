@@ -10,7 +10,7 @@ router.get("/:id", async (req, res, next) => {
     });
     res.json(carts);
   } catch (err) {
-    console.log(err);
+    next(err);
   }
 });
 
@@ -27,7 +27,7 @@ router.put("/add/:id", async (req, res, next) => {
     });
     res.json(activeCart);
   } catch (err) {
-    console.log(err);
+    next(err);
   }
 });
 
@@ -44,7 +44,7 @@ router.put("/remove/:id", async (req, res, next) => {
     });
     res.json(activeCart);
   } catch (err) {
-    console.log(err);
+    next(err);
   }
 });
 
