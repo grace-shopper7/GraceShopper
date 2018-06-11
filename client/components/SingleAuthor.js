@@ -26,17 +26,6 @@ class SingleAuthor extends Component {
             )
         })}
       </div>
-      // <div>
-      //   <div><img src={selectedAuthor.imageUrl}/></div>
-
-      //   <div>
-      //     <div>{selectedAuthor.firstName} {selectedAuthor.lastName}</div>
-      //     <div>Born in: {selectedAuthor.countryOfOrigin}, in {selectedAuthor.DateOfBirth}</div>
-      //     <div>{selectedAuthor.bio}</div>
-      //   </div>
-
-        // {/* <button type="submit" onClick={() => this.props.addItem(selectedBook, +this.props.user.id)}>Add to Cart</button> */}
-      // </div>
     );
   }
 }
