@@ -40,7 +40,7 @@ router.put("/remove/:id", async (req, res, next) => {
     await activeCart.removeBook(book);
     activeCart = await Cart.findOne({
       where: { userId: req.params.id, completed: false },
-      include: [Book]
+      include: [{model: Book, include: [Author]}]
     });
     res.json(activeCart);
   } catch (err) {
@@ -48,10 +48,8 @@ router.put("/remove/:id", async (req, res, next) => {
   }
 });
 
-router.put("/checkout/:id", async (req, res, next) => {
-  const activeCart = await Cart.findOne({
-    where: { userId: req.params.id, completed: false }
-  });
+router.put("/checkout", async (req, res, next) => {
+  const activeCart = await Cart.findById(req.body.id);
   await activeCart.update({ completed: true, status: "Shippped" });
   const user = await User.findById(req.params.id);
   const previous = await user.getCarts();

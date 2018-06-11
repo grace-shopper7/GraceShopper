@@ -9,6 +9,10 @@ class ShoppingCart extends React.Component {
     const books = this.props.cart.active ? this.props.cart.active.books : [];
     const id = this.props.user.id;
     const user = this.props.user;
+    const total =
+      books && books.length
+        ? convertPrice(books.reduce((acc, book) => acc + book.price, 0))
+        : 0;
     return (
       <div id="shoppingcart">
         <div id="cartitems">
@@ -42,32 +46,15 @@ class ShoppingCart extends React.Component {
           )}
         </div>
         <div id="cartoptions">
-          {books && books.length ? (
-            <div>{`Total: ${convertPrice(
-              books.reduce((acc, book) => acc + book.price, 0)
-            )}`}</div>
-          ) : null}
+          {books && books.length ? <div>{`Total: ${total}`}</div> : null}
           {user.firstName ? (
             <div>{`${user.firstName} ${user.lastName}`}</div>
           ) : null}
           {id ? (
-            <form action="your-server-side-code" method="POST">
-              <script
-                src="https://checkout.stripe.com/checkout.js"
-                class="stripe-button"
-                data-key="pk_test_g6do5S237ekq10r65BnxO6S0"
-                data-amount="999"
-                data-name="Stripe.com"
-                data-description="Widget"
-                data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-                data-locale="auto"
-                data-zip-code="true"
-              />
-            </form>
+            <Link to="/checkout">
+              <button type="submit">Proceed to checkout</button>
+            </Link>
           ) : (
-            // <button type="submit" onClick={() => this.props.checkout(id)}>
-            //   Checkout
-            // </button>
             <div>Please log in to view your cart</div>
           )}
         </div>
