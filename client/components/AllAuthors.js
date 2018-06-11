@@ -6,7 +6,6 @@ class AllAuthors extends Component {
 
   render() {
     const authors = this.props.authors ? this.props.authors : [];
-    console.log(authors)
     return (
       <div className="all-authors">
         {authors.map(author => <AuthorPreview key={author.id} author={author} />)}
