@@ -568,7 +568,7 @@ const bookData = [{
   "condition": null,
   "description": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
   "numberSold": 5,
-  "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfTs4ndMFhAZhzYQH9Rre42Ft6wORL5TmXjDvWKZZHcbjhwfjzbg",
+  "imageUrl": "http://www.streetlightgraphics.com/wp-content/gallery/general/Uprising-800-Cover-reveal-and-Promotional.jpg",
   "authorId": 9
 }, {
   "title": "Great Texas Dynamite Chase, The",
