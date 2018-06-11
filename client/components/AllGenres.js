@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom"
 
-class AllGenres extends React.Component {
+export class AllGenres extends React.Component {
   render() {
     let genreArr = [];
     this.props.books.map(book => {
