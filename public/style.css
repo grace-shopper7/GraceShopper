@@ -128,10 +128,28 @@ form div {
 
 .cartitem {
   display:flex;
+  justify-content: space-around;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   margin: 3px 0px;
-  width: 75%
+  width: 75%;
+  max-height: 150px;
+}
+
+.cartitem img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#cartitems {
+  flex-grow: 4;
+}
+
+#cartoptions {
+  flex-grow: 1;
+  text-align:center;
+  padding: 10px 0;
+  background-color: beige;
 }
 
 .navbar-features {
