@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import { gotUserReviews } from '../store/reviews'
+import { Link } from 'react-router-dom'
 
 /**
  * COMPONENT
@@ -14,7 +15,7 @@ export class UserHome extends React.Component {
 
 
   render () {
-    const { email, user } = props;
+    const { email, user } = this.props;
 
     return user.id ? (
       <Link to={`user/${user.id}`}>
