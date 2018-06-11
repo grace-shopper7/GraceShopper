@@ -10,6 +10,9 @@ import SingleBook from './components/SingleBook'
 import SingleAuthor from './components/SingleAuthor'
 import AllGenres from './components/AllGenres'
 import BooksByGenres from './components/BooksByGenres';
+import UserAccount from './components/UserAccount'
+import UserDetailsAdd from './components/UserDetailsAdd'
+import UserDetailsEdit from './components/UserDetailsEdit'
 
 /**
  * COMPONENT
@@ -39,6 +42,9 @@ class Routes extends Component {
             <Route exact path="/cart" component={ShoppingCart} />
             <Route exact path="/history" component={PreviousPurchases} />
             {/* <Route exact path="/authors/:authorId" component={BooksByGenres} /> */}
+            <Route exact path="/user/" component={UserAccount} />
+            <Route path='/user/add/address' component={UserDetailsAdd} />
+            <Route exact path='/user/edit/address' component={UserDetailsEdit} />
             <Route exact path="/authors" component={AllAuthors} />
             <Route exact path="/" component={AllBooks} />
         {/* Displays our Login component as a fallback */}
