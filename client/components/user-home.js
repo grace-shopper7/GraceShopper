@@ -1,32 +1,46 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import {connect} from 'react-redux'
+import React from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { gotUserReviews } from "../store/reviews";
 
 /**
  * COMPONENT
  */
-export const UserHome = (props) => {
-  const {email} = props
 
-  return (
-      <div className="navbar-writing">Welcome, {email}</div>
-  )
+export class UserHome extends React.Component {
+  componentDidMount() {
+    if (this.props.user) this.props.gotUserReviews(this.props.user.id);
+  }
+
+  render() {
+    return <div className="navbar-writing">Welcome, {this.props.email}</div>;
+  }
 }
 
 /**
  * CONTAINER
  */
-const mapState = (state) => {
+const mapState = state => {
   return {
-    email: state.user.email
-  }
-}
+    email: state.user.email,
+    user: state.user
+  };
+};
 
-export default connect(mapState)(UserHome)
+const mapDispatch = dispatch => {
+  return {
+    gotUserReviews: userId => dispatch(gotUserReviews(userId))
+  };
+};
+
+export default connect(
+  mapState,
+  mapDispatch
+)(UserHome);
 
 /**
  * PROP TYPES
  */
 UserHome.propTypes = {
   email: PropTypes.string
-}
+};

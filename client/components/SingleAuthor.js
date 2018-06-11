@@ -10,8 +10,6 @@ class SingleAuthor extends Component {
       return <div>Loading...</div>
     }
 
-    console.log('working')
-
     const authorId = this.props.match.params.authorId;
     const filteredAuthor = this.props.author.filter(author => {
       return author.id === +authorId;

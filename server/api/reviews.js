@@ -11,9 +11,9 @@ router.get("/", async (req, res, next) => {
   }
 });
 
-router.get("/:reviewId", async (req, res, next) => {
+router.get("/:bookId", async (req, res, next) => {
   try {
-    const review = await Review.findById(req.params.reviewId);
+    const review = await Review.findById(req.params.Id);
     res.json(review);
   } catch (error) {
     next(error);

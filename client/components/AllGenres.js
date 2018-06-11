@@ -17,7 +17,7 @@ class AllGenres extends React.Component {
     return (
       <div className="allGenres">
         {unique.map((genre) =>
-          <div key={genre}>
+          <div className="each-genre" key={genre}>
             <Link to={`/genres/${genre}`}>{genre}</Link>
           </div>
         )}

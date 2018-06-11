@@ -24,7 +24,6 @@ class Routes extends Component {
   }
 
   render() {
-    console.log(Login)
     return (
       <Switch>
         {/* Routes placed here are available to all visitors */}

@@ -3,6 +3,7 @@ import history from '../history'
 
 // ACTION TYPES
 const GET_ALL_BOOKS = 'GET_ALL_BOOKS'
+const ADD_REVIEW = 'ADD_REVIEW'
 
 // INITIAL STATE
 const allBooks = [];
@@ -30,6 +31,16 @@ export default function (state = allBooks, action) {
   switch (action.type) {
     case GET_ALL_BOOKS:
       return action.books
+    case ADD_REVIEW:
+    let bookId = parseInt(action.bookId)
+    return state.map((book) => {
+      if (book.id === bookId){
+        book.reviews.push(action.review)
+        return book
+      } else {
+        return book
+      }
+    })
     default:
       return state
   }
