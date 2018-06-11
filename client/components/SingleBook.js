@@ -24,7 +24,7 @@ class SingleBook extends Component {
     return (
       <div id="single-book-view">
         <div>
-          <img src={selectedBook.imageUrl} />
+          <img className='book-cover' src={selectedBook.imageUrl} />
         </div>
 
         <div>

@@ -117,10 +117,11 @@ form div {
 }
 
 #books-by-genres {
-  text-align: center;
   display: flex;
-  flex-wrap: wrap;
-  width: 90%;
+  margin-left: 200px;
+  height: 500px;
+  width: auto;
+  position: relative;
 }
 
 #books-container {
