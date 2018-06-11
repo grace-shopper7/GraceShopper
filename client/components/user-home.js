@@ -1,40 +1,40 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import {connect} from 'react-redux'
-import {Link} from 'react-router-dom'
-
+import React from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
 /**
  * COMPONENT
  */
-export const UserHome = (props) => {
-  const {email} = props
-  const {user} = props
+export const UserHome = props => {
+  const { email, user } = props;
 
-  return (
+  return user.id ? (
     <Link to={`user/${user.id}`}>
-      <h3> className="navbar-writing">{email}</h3>
-      <div >View Account</div>
+      <div className="navbar-writing" >{email}</div>
+      <div>View Account</div>
     </Link>
-  )
-}
+  ) : null;
+};
 
 /**
  * CONTAINER
  */
-const mapState = (state) => {
+const mapState = state => {
   return {
     email: state.user.email,
     user: state.user
-  }
-}
+  };
+};
 
-
-export default connect(mapState, null)(UserHome)
+export default connect(
+  mapState,
+  null
+)(UserHome);
 
 /**
  * PROP TYPES
  */
 UserHome.propTypes = {
   email: PropTypes.string
-}
+};

@@ -31,12 +31,11 @@ router.post("/", async (req, res, next) => {
 
 router.put("/:reviewId", async (req, res, next) => {
   try {
-    const review = await Review.update(req.body, {
-      where: {
-        id: req.params.reviewId
-      }
+    const result = await Review.update(req.body, {
+      where: { id: req.params.reviewId },
+      returning: true
     });
-    res.json(review);
+    res.json(result[1][0]);
   } catch (error) {
     next(error);
   }
