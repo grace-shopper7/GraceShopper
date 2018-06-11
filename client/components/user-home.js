@@ -11,9 +11,10 @@ import {gotAddress} from '../store/address'
 
 export class UserHome extends React.Component {
   componentDidMount() {
-    if (this.props.user) this.props.gotUserReviews(this.props.user.id);
+    if (this.props.user) { this.props.gotUserReviews(this.props.user.id);
 
     this.props.gotAddress(this.props.user.id)
+    }
   }
 
   render() {
