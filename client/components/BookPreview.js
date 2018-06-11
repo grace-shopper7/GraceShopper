@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const BookPreview = props => {
   const book = props.book;
+  const author = props.author;
   return (
     <div className="bookpreview">
       <Link to={`/books/${book.id}`}>
@@ -10,7 +11,7 @@ const BookPreview = props => {
         <div className="book-titles">{book.title}</div>
       </Link>
       <div className="books-author">
-        {book.authorId
+        {author ? `By ${author.firstName} ${author.lastName}` : book.authorId
           ? `By ${book.author.firstName} ${book.author.lastName}`
           : null}
       </div>
