@@ -117,10 +117,11 @@ form div {
 }
 
 #books-by-genres {
-  text-align: center;
   display: flex;
-  flex-wrap: wrap;
-  width: 90%;
+  margin-left: 200px;
+  height: 500px;
+  width: auto;
+  position: relative;
 }
 
 #books-container {
@@ -203,4 +204,21 @@ hr {
 .page-header {
   padding-left: 7px;
   padding-top: 10px;
+}
+
+#single-book-view {
+  text-align: center;
+}
+
+#review-form-container{
+  display: flex;
+  justify-content: space-evenly center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#review-submit-button {
+  display: flex;
+  justify-content: center;
 }

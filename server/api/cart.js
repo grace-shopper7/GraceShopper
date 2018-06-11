@@ -10,25 +10,24 @@ router.get("/:id", async (req, res, next) => {
     });
     res.json(carts);
   } catch (err) {
-    console.log(err);
+    next(err);
   }
 });
 
 router.put("/add/:id", async (req, res, next) => {
   try {
     let activeCart = await Cart.findOne({
-      where: { userId: req.params.id, completed: false },
-      include: [Book]
+      where: { userId: req.params.id, completed: false }
     });
     const book = await Book.findOne({ where: { id: req.body.id } });
     await activeCart.addBook(book);
     activeCart = await Cart.findOne({
       where: { userId: req.params.id, completed: false },
-      include: [Book]
+      include: [{model: Book, include: [Author], required: false}]
     });
     res.json(activeCart);
   } catch (err) {
-    console.log(err);
+    next(err);
   }
 });
 
@@ -45,7 +44,7 @@ router.put("/remove/:id", async (req, res, next) => {
     });
     res.json(activeCart);
   } catch (err) {
-    console.log(err);
+    next(err);
   }
 });
 
@@ -58,7 +57,6 @@ router.put("/checkout/:id", async (req, res, next) => {
   const previous = await user.getCarts();
   const active = await Cart.create({ status: "active" });
   await user.addCart(active);
-  console.log(active)
   res.json({previous, active});
 });
 
