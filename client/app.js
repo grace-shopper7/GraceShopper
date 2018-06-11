@@ -6,7 +6,7 @@ const App = () => {
   return (
     <div className="app-container">
       <Navbar />
-      <Sidebar />
+      {/* <Sidebar /> */}
       <Routes />
     </div>
   )
