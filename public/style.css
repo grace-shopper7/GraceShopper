@@ -13,7 +13,7 @@ label {
 }
 
 .navbar {
-  margin: 0;
+  margin: auto;
   padding: 0;
   position: relative;
   top: -22px;
@@ -75,12 +75,6 @@ form div {
 /* .author-name:hover {
   color: orange
 } */
-
-
-.book-cover {
-  width: 11em;
- height: 16em;
-}
 
 #sidebar-container {
   display: flex;
@@ -206,18 +200,80 @@ hr {
 }
 
 #single-book-view {
+  width: 70%;
   text-align: center;
+  margin: auto;
 }
 
 #review-form-container{
   display: flex;
-  justify-content: space-evenly center;
-  flex-direction: column;
+  justify-content: space-evenly;
+  flex-direction: row;
   align-items: center;
   text-align: center;
+  margin: auto;
 }
 
-#review-submit-button {
+#review-form {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+}
+
+select {
+  width: 4em;
+  margin: auto;
+}
+
+#review-form-buttons {
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+#review-book-info {
+  align-items: center;
+}
+
+textarea {
+  width: 25em;
+  height: 25em;
+  resize: none;
+}
+
+
+.allGenres {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 300px;
+}
+
+.each-genre {
+  width: 15em;
+  height: 100px;
+  margin: auto;
+}
+
+#books-by-genres {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  margin: auto;
+}
+
+.books-container {
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 18em;
+}
+
+#book-cover {
+  width: 25em;
+  height: 18em;
+  margin: auto;
+}
+
+.book-cover {
+ width: 11em;
+ height: 16em;
 }
