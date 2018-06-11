@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 
+
 /**
  * COMPONENT
  */
@@ -11,9 +12,9 @@ export const UserHome = (props) => {
   const {user} = props
 
   return (
-    <Link to='/user'>
-      <div className="navbar-writing">Welcome, {email}</div>
-      <div>View Account</div>
+    <Link to={`user/${user.id}`}>
+      <div className="navbar-writing">{email}</div>
+      <div >View Account</div>
     </Link>
   )
 }
@@ -28,7 +29,8 @@ const mapState = (state) => {
   }
 }
 
-export default connect(mapState)(UserHome)
+
+export default connect(mapState, null)(UserHome)
 
 /**
  * PROP TYPES

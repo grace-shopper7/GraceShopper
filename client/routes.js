@@ -10,7 +10,10 @@ import SingleBook from './components/SingleBook'
 import SingleAuthor from './components/SingleAuthor'
 import AllGenres from './components/AllGenres'
 import BooksByGenres from './components/BooksByGenres';
-import UserPage from './components/UserPage'
+import UserAccount from './components/UserAccount'
+import EditUserDetails from './components/EditUserDetails'
+import AddUserDetails from './components/AddUserDetails'
+
 
 /**
  * COMPONENT
@@ -22,6 +25,7 @@ class Routes extends Component {
     this.props.loadInitialData()
     this.props.gotBooks()
     this.props.gotAuthors()
+
   }
 
   render() {
@@ -41,7 +45,9 @@ class Routes extends Component {
 
             <Route exact path="/authors" component={AllAuthors} />
             <Route exact path="/" component={AllBooks} />
-            <Route exact path='/user' component={UserPage} />
+            <Route exact path='/user/:userId' component={UserAccount} />
+            <Route exact path='/user/add/address' component={AddUserDetails} />
+            <Route exact path='/user/edit/address' component={EditUserDetails} />
         {/* Displays our Login component as a fallback */}
       </Switch>
     )
@@ -67,7 +73,7 @@ const mapDispatch = (dispatch) => {
       dispatch(me())
     },
     gotBooks: () => dispatch(gotBooks()),
-    gotAuthors: () => dispatch(gotAuthors())
+    gotAuthors: () => dispatch(gotAuthors()),
   }
 }
 
