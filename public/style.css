@@ -207,7 +207,8 @@ hr {
 
 #review-submit-button {
   display: flex;
-  height: 300px;
+  justify-content: center;
+  height: 25px;
 }
 
 .allGenres {
