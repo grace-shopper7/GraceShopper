@@ -22,6 +22,7 @@ class BooksByGenres extends React.Component {
               </div>
               </Link>
               </div>
+              </div>
             )
           }
         })}

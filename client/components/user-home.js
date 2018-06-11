@@ -9,7 +9,7 @@ import { gotUserReviews } from '../store/reviews'
 
 export class UserHome extends React.Component {
   componentDidMount () {
-    this.props.gotUserReviews(this.props.user.id)
+    if (this.props.user) this.props.gotUserReviews(this.props.user.id)
   }
 
   render () {
