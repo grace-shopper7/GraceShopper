@@ -15,10 +15,10 @@ router.get('/', (req, res, next) => {
 
 router.put('/:userId', async (req, res, next) => {
   try {
-    let updatedUser = await User.update(req.body, { where: {
+       await User.update(req.body, { where: {
       id: req.params.userId
     }})
-    res.json(updatedUser)
+    res.json(await User.findById(req.params.userId))
   } catch (err) {console.log(err)}
 })
 
