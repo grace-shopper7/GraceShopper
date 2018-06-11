@@ -11,26 +11,28 @@ class ShoppingCart extends React.Component {
     return (
       <div id="shoppingcart">
         <div>
-          {books
-            ? books.map(book => (
-                <div className="cartitem" key={book.id}>
-                  <img src={book.imageUrl} />
-                  <div>
-                    <h4>{book.title}</h4>
-                    <h5>
-                      `{book.author.firstName} {book.author.lastName}`
-                    </h5>
-                    <h3>{`$${convertPrice(book.price)}`}</h3>
-                  </div>
-                  <button
-                    type="submit"
-                    onClick={() => this.props.removeItem(book, id)}
-                  >
-                    Remove from cart
-                  </button>
+          {books && books.length ? (
+            books.map(book => (
+              <div className="cartitem" key={book.id}>
+                <img src={book.imageUrl} />
+                <div>
+                  <h4>{book.title}</h4>
+                  <h5>
+                    `{book.author.firstName} {book.author.lastName}`
+                  </h5>
+                  <h3>{`$${convertPrice(book.price)}`}</h3>
                 </div>
-              ))
-            : null}
+                <button
+                  type="submit"
+                  onClick={() => this.props.removeItem(book, id)}
+                >
+                  Remove from cart
+                </button>
+              </div>
+            ))
+          ) : (
+            <h2>Your cart is empty</h2>
+          )}
         </div>
         <div id="cartoptions">
           {books && books.length ? (
@@ -41,9 +43,13 @@ class ShoppingCart extends React.Component {
           {user.firstName ? (
             <div>{`${user.firstName} ${user.lastName}`}</div>
           ) : null}
-          <button type="submit" onClick={() => this.props.checkout(id)}>
-            Checkout
-          </button>
+          {id ? (
+            <button type="submit" onClick={() => this.props.checkout(id)}>
+              Checkout
+            </button>
+          ) : (
+            <div>Please log in to view your cart</div>
+          )}
         </div>
       </div>
     );
