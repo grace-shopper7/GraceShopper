@@ -40,7 +40,7 @@ router.put("/remove/:id", async (req, res, next) => {
     await activeCart.removeBook(book);
     activeCart = await Cart.findOne({
       where: { userId: req.params.id, completed: false },
-      include: [Book]
+      include: [{model: Book, include: [Author]}]
     });
     res.json(activeCart);
   } catch (err) {
