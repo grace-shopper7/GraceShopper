@@ -13,16 +13,7 @@ class BooksByGenres extends React.Component {
       {this.props.books.map((book) => {
         if (book.genre.includes(selectedGenre)){
           return (
-            <div className="books-container" key={book.id}>
-              <div id="book-cover" key={book.id}>
-                <Link to={`/books/${book.id}`} >
-                <img src={book.imageUrl}></img>
-              <div className="genre-book-author">
-              {`${book.title} by ${book.author.firstName} ${book.author.lastName}`}
-              </div>
-              </Link>
-              </div>
-              </div>
+            <BookPreview key={book.id} book={book} />
             )
           }
         })}

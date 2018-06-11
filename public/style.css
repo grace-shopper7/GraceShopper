@@ -232,6 +232,14 @@ hr {
   margin: auto;
 }
 
+#review-book-cover {
+  height:300px;
+}
+
+#review-book-cover img{
+  max-height:100%;
+}
+
 #review-form {
   display: flex;
   flex-direction: column;
