@@ -4,7 +4,7 @@ const UserDetailsEditForm = (props) => {
 
 return (
 
-<form onSubmit={props.handleSubmit}>
+<form onSubmit={props.handleSubmit} className='address-edit-form'>
 <label htmlFor="firstName">First Name</label>
 <input
   type="text"

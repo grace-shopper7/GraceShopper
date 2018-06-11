@@ -19,10 +19,10 @@ export class UserHome extends React.Component {
 
   render() {
     return  (
-    // <Link to='/user'>
+    <Link to='/user'>
     <div className="navbar-writing">Welcome, {this.props.email}</div>
-    // <div>View account details</div>
-    // </Link>
+    <div className="navbar-writing">View account details</div>
+    </Link>
 
     )
   }
