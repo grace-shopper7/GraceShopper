@@ -9,7 +9,7 @@ import { gotUserReviews } from '../store/reviews'
 
 export class UserHome extends React.Component {
   componentDidMount () {
-    this.props.gotUserReviews(this.props.userId)
+    this.props.gotUserReviews(this.props.user.id)
   }
 
   render () {
@@ -25,7 +25,7 @@ export class UserHome extends React.Component {
 const mapState = (state) => {
   return {
     email: state.user.email,
-    userId: state.user.id
+    user: state.user
   }
 }
 
