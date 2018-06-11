@@ -152,7 +152,10 @@ form div {
 }
 
 #cartoptions {
-  flex-grow: 1
+  flex-grow: 1;
+  text-align:center;
+  padding: 10px 0;
+  background-color: beige;
 }
 
 .navbar-features {
