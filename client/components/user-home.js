@@ -13,7 +13,7 @@ export const UserHome = (props) => {
 
   return (
     <Link to={`user/${user.id}`}>
-      <div className="navbar-writing">{email}</div>
+      <h3> className="navbar-writing">{email}</h3>
       <div >View Account</div>
     </Link>
   )

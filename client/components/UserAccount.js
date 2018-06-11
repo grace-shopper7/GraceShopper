@@ -32,7 +32,7 @@ class UserAccount extends Component {
       :
         <div>
        <p>Your account does not have a registered address. Please register an address</p>
-       <Link to="/useraddress">
+       <Link to='/user/add/address'>
        <button>register address</button>
        </Link>
 
