@@ -199,17 +199,38 @@ hr {
 
 #review-form-container{
   display: flex;
-  justify-content: space-evenly center;
-  flex-direction: column;
+  justify-content: space-evenly;
+  flex-direction: row;
   align-items: center;
   text-align: center;
+  margin: auto;
 }
 
-#review-submit-button {
+#review-form {
   display: flex;
-  justify-content: center;
-  height: 25px;
+  flex-direction: column;
 }
+
+select {
+  width: 4em;
+  margin: auto;
+}
+
+#review-form-buttons {
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+#review-book-info {
+  align-items: center;
+}
+
+textarea {
+  width: 25em;
+  height: 25em;
+  resize: none;
+}
+
 
 .allGenres {
   display: flex;

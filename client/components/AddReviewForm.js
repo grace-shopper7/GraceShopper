@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { addedReview } from '../store/reviews'
 
 class AddReviewForm extends React.Component {
@@ -36,12 +36,15 @@ class AddReviewForm extends React.Component {
 
     return (
       <div id="review-form-container">
+      <div id="review-book-info">
         <h2>Tell us about</h2>
-        <div className="book-cover">
+        <div id="review-book-cover">
           <img src={currentBook[0].imageUrl} />
         </div>
         <h3>{`${currentBook[0].title} by ${currentBook[0].author.firstName} ${currentBook[0].author.lastName}`}
         </h3>
+      </div>
+      <div id="review-form-itself">
         <form id="review-form" onSubmit={this.handleSubmit}>
           <label htmlFor="rating"> Rating </label>
             <select name="rating">
@@ -52,11 +55,19 @@ class AddReviewForm extends React.Component {
               <option value="1">5</option>
             </select>
           <label htmlFor="text"> Description </label>
-            <textarea name="text" > Enter text here...</textarea>
-          <div id="review-submit-button">
-            <button type="submit" >Submit</button>
+            <textarea name="text" placeholder="Write your review here" />
+          <div id="review-form-buttons">
+            <div id="review-cancel-button" >
+              <Link to={`/books/${this.props.match.params.bookId}`} >
+              <button type="button" > Cancel </button>
+              </Link>
+            </div>
+            <div id="review-submit-button">
+              <button type="submit" >Submit</button>
+            </div>
           </div>
         </form>
+      </div>
       </div>
     )
   }
