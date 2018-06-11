@@ -43,7 +43,7 @@ router.put("/:reviewId", async (req, res, next) => {
 
 router.delete("/:reviewId", async (req, res, next) => {
   try {
-    await Review.destory({
+    await Review.destroy({
       where: {
         id: req.params.authorId
       }

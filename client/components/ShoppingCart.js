@@ -51,10 +51,23 @@ class ShoppingCart extends React.Component {
             <div>{`${user.firstName} ${user.lastName}`}</div>
           ) : null}
           {id ? (
-            <button type="submit" onClick={() => this.props.checkout(id)}>
-              Checkout
-            </button>
+            <form action="your-server-side-code" method="POST">
+              <script
+                src="https://checkout.stripe.com/checkout.js"
+                class="stripe-button"
+                data-key="pk_test_g6do5S237ekq10r65BnxO6S0"
+                data-amount="999"
+                data-name="Stripe.com"
+                data-description="Widget"
+                data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                data-locale="auto"
+                data-zip-code="true"
+              />
+            </form>
           ) : (
+            // <button type="submit" onClick={() => this.props.checkout(id)}>
+            //   Checkout
+            // </button>
             <div>Please log in to view your cart</div>
           )}
         </div>
