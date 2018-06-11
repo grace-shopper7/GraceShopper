@@ -4,9 +4,6 @@ import { Link } from "react-router-dom";
 import BookPreview from "./BookPreview";
 
 class BooksByGenres extends React.Component {
-//   constructor(props) {
-//     super(props);
-//   }
 
   render() {
     let selectedGenre = this.props.match.params.genre;
@@ -25,11 +22,10 @@ class BooksByGenres extends React.Component {
               </div>
               </Link>
               </div>
-            </div>
-          )
-        }
-      })}
-    </div>
+            )
+          }
+        })}
+      </div>
     )
   }
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import { removeItemFromCart, checkoutCart } from "../store/cart";
 import { convertPrice } from "../store/books";
 
@@ -14,14 +15,16 @@ class ShoppingCart extends React.Component {
           {books
             ? books.map(book => (
                 <div className="cartitem" key={book.id}>
-                  <img src={book.imageUrl} />
-                  <div>
-                    <h4>{book.title}</h4>
-                    <h5>
-                      `{book.author.firstName} {book.author.lastName}`
-                    </h5>
-                    <h3>{`$${convertPrice(book.price)}`}</h3>
-                  </div>
+                  <Link to={`books/${book.id}`}>
+                    <img src={book.imageUrl} />
+                    <div>
+                      <h4>{book.title}</h4>
+                      <h5>
+                        `{book.author.firstName} {book.author.lastName}`
+                      </h5>
+                      <h3>{`$${convertPrice(book.price)}`}</h3>
+                    </div>
+                  </Link>
                   <button
                     type="submit"
                     onClick={() => this.props.removeItem(book, id)}
