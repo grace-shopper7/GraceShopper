@@ -11,17 +11,18 @@ import {gotAddress} from '../store/address'
 
 export class UserHome extends React.Component {
   componentDidMount() {
-    if (this.props.user) this.props.gotUserReviews(this.props.user.id);
-
+    if (this.props.user) {
+      this.props.gotUserReviews(this.props.user.id);
     this.props.gotAddress(this.props.user.id)
+    }
   }
 
   render() {
     return  (
-    <Link to='/user'>
+    // <Link to='/user'>
     <div className="navbar-writing">Welcome, {this.props.email}</div>
-    <div>View account details</div>
-    </Link>
+    // <div>View account details</div>
+    // </Link>
 
     )
   }
