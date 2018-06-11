@@ -1,21 +1,29 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import { Link } from "react-router-dom";
+import React from 'react'
+import PropTypes from 'prop-types'
+import {connect} from 'react-redux'
+import { gotUserReviews } from '../store/reviews'
 
 /**
  * COMPONENT
  */
-export const UserHome = props => {
-  const { email, user } = props;
+export class UserHome extends React.Component {
+  componentDidMount () {
+    if (this.props.user) this.props.gotUserReviews(this.props.user.id)
+  }
 
-  return user.id ? (
-    <Link to={`user/${user.id}`}>
-      <div className="navbar-writing" >{email}</div>
-      <div>View Account</div>
-    </Link>
-  ) : null;
-};
+
+
+  render () {
+    const { email, user } = props;
+
+    return user.id ? (
+      <Link to={`user/${user.id}`}>
+        <div className="navbar-writing" >{email}</div>
+        <div>View Account</div>
+      </Link>
+    ) : null;
+  }
+}
 
 /**
  * CONTAINER
@@ -27,10 +35,14 @@ const mapState = state => {
   };
 };
 
-export default connect(
-  mapState,
-  null
-)(UserHome);
+
+const mapDispatch = (dispatch) => {
+  return {
+    gotUserReviews: (userId) => dispatch(gotUserReviews(userId))
+  }
+}
+
+export default connect(mapState, mapDispatch)(UserHome)
 
 /**
  * PROP TYPES

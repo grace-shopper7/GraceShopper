@@ -9,17 +9,19 @@ class BooksByGenres extends React.Component {
     let selectedGenre = this.props.match.params.genre;
 
     return (
-      <div id="books-by-genres">
-        {this.props.books.map((book) => {
-          if (book.genre.includes(selectedGenre)) {
-            return (
-              <div id="books-container">
-                <div id="book-cover" key={book.id}>
-                  <Link to={`/books/${book.id}`} >
-                    <img className='book-cover' src={book.imageUrl} />
-                    {`${book.title} by ${book.author.firstName} ${book.author.lastName}`}
-                  </Link>
-                </div>
+    <div id="books-by-genres">
+      {this.props.books.map((book) => {
+        if (book.genre.includes(selectedGenre)){
+          return (
+            <div className="books-container" key={book.id}>
+              <div id="book-cover" key={book.id}>
+                <Link to={`/books/${book.id}`} >
+                <img src={book.imageUrl}></img>
+              <div className="genre-book-author">
+              {`${book.title} by ${book.author.firstName} ${book.author.lastName}`}
+              </div>
+              </Link>
+              </div>
               </div>
             )
           }

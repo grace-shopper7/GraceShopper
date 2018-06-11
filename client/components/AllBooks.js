@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import BookPreview from "./BookPreview";
 
 class AllBooks extends React.Component {
-
   render() {
     const books = this.props.books ? this.props.books : [];
     return (
@@ -16,7 +15,7 @@ class AllBooks extends React.Component {
 
 const mapState = state => ({
   books: state.books,
-  user: state.user
+  user: state.user,
 });
 
 export default connect(mapState)(AllBooks);
