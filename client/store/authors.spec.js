@@ -15,7 +15,7 @@ describe("Authors thunk creators", () => {
   let store;
   let mockAxios;
 
-  const initialState = { books: [] };
+  const initialState = { authors: [] };
 
   beforeEach(() => {
     mockAxios = new MockAdapter(axios);
