@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import BookPreview from "./BookPreview";
 
-class AllBooks extends React.Component {
+export class AllBooks extends React.Component {
   render() {
     const books = this.props.books ? this.props.books : [];
     return (

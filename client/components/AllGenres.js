@@ -2,8 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom"
 
-class AllGenres extends React.Component {
-
+export class AllGenres extends React.Component {
   render() {
 
     const pictures = ['https://lawofattractionsolutions.com/wp-content/uploads/2016/04/action-clapboard.png',
