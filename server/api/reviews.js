@@ -21,6 +21,7 @@ router.get("/:bookId", async (req, res, next) => {
 });
 
 router.post("/", async (req, res, next) => {
+  if (req.user.id != req.body.userId) next()
   try {
     const review = await Review.create(req.body);
     res.json(review);
@@ -31,11 +32,10 @@ router.post("/", async (req, res, next) => {
 
 router.put("/:reviewId", async (req, res, next) => {
   try {
-    const result = await Review.update(req.body, {
-      where: { id: req.params.reviewId },
-      returning: true
-    });
-    res.json(result[1][0]);
+    const review = await Review.findById(req.params.reviewId);
+    if (!(req.user.admin || req.user.id == review.userId)) next();
+    await review.update(req.body)
+    res.json(review);
   } catch (error) {
     next(error);
   }
@@ -43,11 +43,9 @@ router.put("/:reviewId", async (req, res, next) => {
 
 router.delete("/:reviewId", async (req, res, next) => {
   try {
-    await Review.destroy({
-      where: {
-        id: req.params.authorId
-      }
-    });
+    const review = await Review.findById(req.params.reviewId);
+    if (!(req.user.admin || req.user.id == review.userId)) next();
+    await review.destroy()
     res.status(204).end();
   } catch (error) {
     next(error);

@@ -15,6 +15,7 @@ router.get('/', (req, res, next) => {
 
 
 router.put('/:userId', async (req, res, next) => {
+  if (req.user.id != req.params.userId) res.next()
   try {
        await User.update(req.body, { where: {
       id: req.params.userId
@@ -25,6 +26,7 @@ router.put('/:userId', async (req, res, next) => {
 
 
 router.delete('/:userId', async (req, res, next) => {
+  if (req.user.id != req.params.userId) res.next()
   try {
     await User.destroy({ where: {
       id: req.params.userId
