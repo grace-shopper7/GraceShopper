@@ -35,30 +35,28 @@ class Routes extends Component {
 
   render() {
     return (
-      <div id="mainarea">
-        <Switch>
-          {/* Routes placed here are available to all visitors */}
-          <Route path="/login" component={Login} />
-          <Route path="/signup" component={Signup} />
-          {/* Routes placed here are only available after logging in */}
-          <Route exact path="/genres/:genre" component={BooksByGenres} />
-          <Route exact path="/genres" component={AllGenres} />
-          <Route exact path="/books/:bookId" component={SingleBook} />
-          <Route exact path="/new-review/:bookId" component={AddReviewForm} />
-          <Route exact path="/home" component={AllBooks} />
-          <Route exact path="/authors/:authorId" component={SingleAuthor} />
-          <Route exact path="/cart" component={ShoppingCart} />
-          <Route exact path="/checkout" component={Checkout} />
-          <Route exact path="/history" component={PreviousPurchases} />
-          {/* <Route exact path="/authors/:authorId" component={BooksByGenres} /> */}
-          <Route exact path="/user/" component={UserAccount} />
-          <Route path="/user/add/address" component={UserDetailsAdd} />
-          <Route exact path="/user/edit/address" component={UserDetailsEdit} />
-          <Route exact path="/authors" component={AllAuthors} />
-          <Route exact path="/" component={AllBooks} />
-          {/* Displays our Login component as a fallback */}
-        </Switch>
-      </div>
+      <Switch>
+        {/* Routes placed here are available to all visitors */}
+        <Route path="/login" component={Login} />
+        <Route path="/signup" component={Signup} />
+        {/* Routes placed here are only available after logging in */}
+        <Route exact path="/genres/:genre" component={BooksByGenres} />
+        <Route exact path="/genres" component={AllGenres} />
+        <Route exact path="/books/:bookId" component={SingleBook} />
+        <Route exact path="/new-review/:bookId" component={AddReviewForm} />
+        <Route exact path="/home" component={AllBooks} />
+        <Route exact path="/authors/:authorId" component={SingleAuthor} />
+        <Route exact path="/cart" component={ShoppingCart} />
+        <Route exact path="/checkout" component={Checkout} />
+        <Route exact path="/history" component={PreviousPurchases} />
+        <Route exact path="/user/" component={UserAccount} />
+        <Route path="/user/add/address" component={UserDetailsAdd} />
+        <Route exact path="/user/edit/address" component={UserDetailsEdit} />
+        <Route exact path="/authors" component={AllAuthors} />
+        <Route exact path="/" component={AllBooks} />
+        <Route exact path="/books" component={AllBooks} />
+        {/* Displays our Login component as a fallback */}
+      </Switch>
     );
   }
 }
