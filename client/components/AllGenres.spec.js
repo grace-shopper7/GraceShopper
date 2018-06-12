@@ -23,16 +23,6 @@ describe("AllGenres", () => {
     it("renders one Link with only one book", () => {
       expect(wrapper.find("Link").length).to.equal(1);
     });
-
-    it("renders a div with Link inside it", () => {
-      expect(
-        wrapper.contains(
-          <div className="each-genre" key="Horror">
-            <Link to={`/genres/Horror`}>{"Horror"}</Link>
-          </div>
-        )
-      ).to.equal(true);
-    });
   });
 
   describe("renders multiple Links for multiple books", () => {
