@@ -13,6 +13,7 @@ class UserAccount extends Component {
     }
 
     return (
+
       <div className="user-page-container">
         {this.props.user.firstName ? (
           <UserDetails address={this.props.address} />
