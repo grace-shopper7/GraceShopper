@@ -615,7 +615,7 @@ const authorData = [{
   "DateOfBirth": "8/17/2017",
   "countryOfOrigin": "Poland",
   "bio": "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.",
-  "imageUrl": "http://dummyimage.com/250x250.png/ff4444/ffffff"
+  "imageUrl": "https://randomuser.me/api/portraits/men/46.jpg"
 }, {
   "id": 2,
   "firstName": "Clarey",
@@ -623,7 +623,7 @@ const authorData = [{
   "DateOfBirth": "3/27/2018",
   "countryOfOrigin": "Indonesia",
   "bio": "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\n\nQuisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.\n\nPhasellus in felis. Donec semper sapien a libero. Nam dui.",
-  "imageUrl": "http://dummyimage.com/250x250.png/5fa2dd/ffffff"
+  "imageUrl": "https://randomuser.me/api/portraits/men/15.jpg"
 }, {
   "id": 3,
   "firstName": "Albrecht",
@@ -631,7 +631,7 @@ const authorData = [{
   "DateOfBirth": "6/3/2018",
   "countryOfOrigin": "Russia",
   "bio": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.\n\nSed ante. Vivamus tortor. Duis mattis egestas metus.",
-  "imageUrl": "http://dummyimage.com/250x250.png/ff4444/ffffff"
+  "imageUrl": "https://randomuser.me/api/portraits/women/50.jpg"
 }, {
   "id": 4,
   "firstName": "Bryce",
@@ -639,7 +639,7 @@ const authorData = [{
   "DateOfBirth": "10/29/2017",
   "countryOfOrigin": "France",
   "bio": "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.",
-  "imageUrl": "http://dummyimage.com/250x250.png/5fa2dd/ffffff"
+  "imageUrl": "https://randomuser.me/api/portraits/men/35.jpg"
 }, {
   "id": 5,
   "firstName": "Myrna",
@@ -647,7 +647,7 @@ const authorData = [{
   "DateOfBirth": "3/17/2018",
   "countryOfOrigin": "Indonesia",
   "bio": "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
-  "imageUrl": "http://dummyimage.com/250x250.png/cc0000/ffffff"
+  "imageUrl": "https://randomuser.me/api/portraits/men/88.jpg"
 }, {
   "id": 6,
   "firstName": "Dori",
@@ -655,7 +655,7 @@ const authorData = [{
   "DateOfBirth": "8/6/2017",
   "countryOfOrigin": "Czech Republic",
   "bio": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
-  "imageUrl": "http://dummyimage.com/250x250.png/cc0000/ffffff"
+  "imageUrl": "https://randomuser.me/api/portraits/women/45.jpg"
 }, {
   "id": 7,
   "firstName": "August",
@@ -663,7 +663,7 @@ const authorData = [{
   "DateOfBirth": "10/15/2017",
   "countryOfOrigin": "Spain",
   "bio": "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
-  "imageUrl": "http://dummyimage.com/250x250.png/ff4444/ffffff"
+  "imageUrl": "https://randomuser.me/api/portraits/women/21.jpg"
 }, {
   "id": 8,
   "firstName": "Tally",
@@ -671,7 +671,7 @@ const authorData = [{
   "DateOfBirth": "11/14/2017",
   "countryOfOrigin": "Kenya",
   "bio": "Fusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
-  "imageUrl": "http://dummyimage.com/250x250.png/dddddd/000000"
+  "imageUrl": "https://randomuser.me/api/portraits/men/28.jpg"
 }, {
   "id": 9,
   "firstName": "Yehudi",
@@ -679,7 +679,7 @@ const authorData = [{
   "DateOfBirth": "7/8/2017",
   "countryOfOrigin": "Indonesia",
   "bio": "Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
-  "imageUrl": "http://dummyimage.com/250x250.png/5fa2dd/ffffff"
+  "imageUrl": "https://randomuser.me/api/portraits/women/26.jpg"
 }, {
   "id": 10,
   "firstName": "Kerri",
@@ -687,7 +687,7 @@ const authorData = [{
   "DateOfBirth": "6/9/2017",
   "countryOfOrigin": "Philippines",
   "bio": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
-  "imageUrl": "http://dummyimage.com/250x250.png/ff4444/ffffff"
+  "imageUrl": "https://randomuser.me/api/portraits/men/34.jpg"
 }]
 
 const reviewData = [{
