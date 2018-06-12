@@ -14,11 +14,11 @@ describe('AllGenres', () => {
 
   beforeEach(() => {
     let resultArr = [];
-    let books = ['Horror', 'Fantasy', 'Romance'];
-    wrapper = shallow(<AllGenres books={books}  />)
+    let books = [{genre: 'Horror'}];
+    wrapper = shallow(<AllGenres books={books} />)
   })
 
-  it('renders Link with genre name', () => {
-    expect(wrapper.find('Link').text()).to.equal('<Link />')
+    it('renders Link with genre name', () => {
+    expect(wrapper.find('Link').text()).to.equal('Horror')
   })
 })
