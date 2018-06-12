@@ -10,7 +10,11 @@ enzyme.configure({ adapter })
 
 describe('AuthForm', () => {
   let testform;
-  beforeEach('the login form', () => { testform = shallow(<AuthForm />) })
+
+  beforeEach('the login form', () => {
+    let name = 'login', displayName = 'Login', handleSubmit = () => { };
+    testform = shallow(<AuthForm name={name} displayName={displayName} handleSubmit={handleSubmit} />)
+  })
 
   it('login form has an email field', () => {
     const email = testform.find('input[name="email"]')
@@ -29,19 +33,13 @@ describe('AuthForm', () => {
   })
 })
 
-describe('submitt functionality', () => {
+describe('submit functionality', () => {
   let testform2;
   const loginSpy = spy();
-  const submitEvent = {
-    preventDefault: spy(),
-    target: {
-      username: { value: 'happy@fullstack.com' },
-      password: { value: '123' },
-    }
-  }
 
   beforeEach('submit', () => {
-    testform2 = shallow(<AuthForm handleSubmit={loginSpy} />)
+    let name = 'login', displayName = 'Login';
+    testform2 = shallow(<AuthForm name={name} displayName={displayName} handleSubmit={loginSpy} />)
   })
   it('calls login function', () => {
     testform2.find('form').simulate('submit')
