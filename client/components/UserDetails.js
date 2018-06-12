@@ -12,17 +12,17 @@ const UserDetails = props => {
       <div className="user-details-container">Your account details:</div>
       {
         <div>
-        <ul className="user-details">
-          <li>
-            Name: {props.user.firstName} {props.user.lastName}{" "}
-          </li>
-          <li>Email: {props.user.email} </li>
-          <li>Street: {props.address.street} </li>
-          <li>Zipcode: {props.address.zipcode} </li>
-          <li>City: {props.address.city} </li>
-          <li>State: {props.address.state} </li>
-          <li>Country: {props.address.country} </li>
-        </ul>
+          <ul className="user-details">
+            <li>
+              Name: {props.user.firstName} {props.user.lastName}{" "}
+            </li>
+            <li>Email: {props.user.email} </li>
+            <li>Street: {props.address.street} </li>
+            <li>Zipcode: {props.address.zipcode} </li>
+            <li>City: {props.address.city} </li>
+            <li>State: {props.address.state} </li>
+            <li>Country: {props.address.country} </li>
+          </ul>
         </div>
       }
 
@@ -33,10 +33,8 @@ const UserDetails = props => {
       </Link>
       <div className="user-purchase"> View your recent purchases</div>
       <Link to="/history" className="purchase-history-link">
-        <button className="purchase-history-btn"> See purchases
-        </button>
+        <button className="purchase-history-btn"> See purchases</button>
       </Link>
-
     </div>
   );
 };

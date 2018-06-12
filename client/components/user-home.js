@@ -18,14 +18,14 @@ export class UserHome extends React.Component {
   }
 
   render() {
-    return  (
-    <Link to='/user'>
-    <div className="navbar-writing">
-    <div >Welcome, {this.props.email}</div>
-    <div >View account details</div>
-    </div>
-    </Link>
-    )
+    return (
+      <Link to="/user">
+        <div className="navbar-writing">
+          <div>Welcome, {this.props.email}</div>
+          <div>View account details</div>
+        </div>
+      </Link>
+    );
   }
 }
 

@@ -56,7 +56,7 @@ const UserDetailsEditForm = props => {
         type="text"
         name="state"
         onChange={props.handleChange}
-        value={props.state.county}
+        value={props.state.state}
       />
 
       <label htmlFor="country">Country</label>
@@ -64,7 +64,7 @@ const UserDetailsEditForm = props => {
         type="text"
         name="country"
         onChange={props.handleChange}
-        value={props.state.county}
+        value={props.state.country}
       />
 
       <button type="submit">Save Changes</button>
