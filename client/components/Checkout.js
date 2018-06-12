@@ -3,63 +3,72 @@ import { connect } from "react-redux";
 import { checkoutCart } from "../store/cart";
 import { convertPrice } from "../store/books";
 import StripeCheckout from "react-stripe-checkout";
+import CheckoutForm from "./CheckoutForm";
 
 class Checkout extends React.Component {
   constructor() {
     super();
-    this.state = {}
+    this.state = {
+      firstName: "",
+      lastName: "",
+      street: "",
+      zipcode: "",
+      city: "",
+      state: "",
+      country: "",
+      hasempty: true
+    };
   }
 
+  static getDerivedStateFromProps = props => {
+    let initState = {};
+    if (props.user) {
+      const { firstName, lastName } = props.user;
+      initState = Object.assign(initState, { firstName, lastName });
+    }
+    if (props.address) initState = Object.assign(initState, props.address);
+    return initState;
+  };
+
+  handleChange = async event => {
+    await this.setState({ [event.target.name]: event.target.value });
+    const fields = Object.keys(this.state);
+    for (let i = 0; i < fields.length; i++) {
+      if (!this.state[fields[i]]) {
+        this.setState({ hasempty: true });
+        return;
+      }
+    }
+    this.setState({ hasempty: false });
+  };
+
   completePurchase = total => {
-    console.log('test')
-    this.props.checkout(this.props.cart.active)
-    history.push('/')
+    this.props.checkout(this.props.cart.active);
+    this.props.history.push("/");
   };
 
   render() {
     const books = this.props.cart.active ? this.props.cart.active.books : [];
-    const id = this.props.user.id;
-    const user = this.props.user;
     const total = books
       ? convertPrice(books.reduce((acc, book) => acc + book.price, 0))
       : 0;
+    console.log(this.state);
     return (
       <div id="checkout">
+        <CheckoutForm handleChange={this.handleChange} state={this.state} />
         <div>
           {books && books.length ? <div>{`Total: ${total}`}</div> : null}
-          {user.firstName ? (
-            <div>{`${user.firstName} ${user.lastName}`}</div>
-          ) : null}
-          {user.addresses ? (
-            <div id="addresschoice">
-              {user.addresses.map(address => (
-                <div key={address.id}>
-                  <input
-                    id={address.id}
-                    type="radio"
-                    name="address"
-                    value={address}
-                  />
-                  <label for={address.id}>{address.street}</label>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <div>test</div>
-          )}
-
           <StripeCheckout
             name="Checkout"
             description="Confirm purchase"
             amount={Number(total) * 100}
-            token={() => this.completePurchase(Number(total) * 100, "Confirm purchase")}
+            token={() =>
+              this.completePurchase(Number(total) * 100, "Confirm purchase")
+            }
             currency="USD"
             stripeKey="pk_test_jhZvySSyMa2oxufj7N2knzrs"
+            disabled={this.state.hasempty}
           />
-
-          <button type="submit" onClick={() => this.props.checkout(id)}>
-            Checkout
-          </button>
         </div>
         <div>
           {books
@@ -84,7 +93,8 @@ class Checkout extends React.Component {
 
 const mapState = state => ({
   user: state.user,
-  cart: state.cart
+  cart: state.cart,
+  address: state.address
 });
 
 const mapDispatch = dispatch => ({

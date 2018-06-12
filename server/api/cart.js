@@ -51,7 +51,7 @@ router.put("/remove/:id", async (req, res, next) => {
 router.put("/checkout", async (req, res, next) => {
   const activeCart = await Cart.findById(req.body.id);
   await activeCart.update({ completed: true, status: "Shippped" });
-  const user = await User.findById(req.params.id);
+  const user = await activeCart.getUser();
   const previous = await user.getCarts();
   const active = await Cart.create({ status: "active" });
   await user.addCart(active);
