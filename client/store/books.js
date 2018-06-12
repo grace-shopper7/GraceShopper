@@ -34,7 +34,7 @@ export const gotBooks = () => {
 
 export const addNewBook = book => {
   return async dispatch => {
-    const { data } = await axios.post("/api/books", book);
+    const { data } = await axios.post("/api/books", {book, key: "test"});
     dispatch(addBook(data));
   };
 };
