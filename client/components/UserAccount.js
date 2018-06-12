@@ -13,38 +13,20 @@ class UserAccount extends Component {
     }
 
     return (
-<<<<<<< HEAD
-      <div>
+      <div className="user-page-container">
         {this.props.user.firstName ? (
           <UserDetails address={this.props.address} />
         ) : (
-          <div>
+          <div className="account-registry">
             <p>
               Your account does not have a registered address. Please register
               an address
             </p>
             <Link to="/user/add/address">
-              <button>register address</button>
+              <button className="user-account-btn">register address</button>
             </Link>
           </div>
         )}
-=======
-      <div className='user-page-container'>
-      {
-
-      (this.props.user.firstName)
-      ? <UserDetails address={this.props.address}/>
-      :
-        <div className='account-registry'>
-       <p>Your account does not have a registered address. Please register an address</p>
-       <Link to='/user/add/address'>
-       <button className='user-account-btn'>register address</button>
-       </Link>
-
-        </div>
-
-      }
->>>>>>> 4bdcb3fadc940238b801703d307e22196dafc492
       </div>
     );
   }
