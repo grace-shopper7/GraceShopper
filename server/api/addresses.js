@@ -4,6 +4,7 @@ const User = require("../db/models/user");
 module.exports = router;
 
 router.get("/:userId", async (req, res, next) => {
+  if (req.user.id != req.params.userId) next();
   try {
     const address = await Address.findOne({
       where: {
@@ -18,9 +19,9 @@ router.get("/:userId", async (req, res, next) => {
 });
 
 router.post("/add/:userId", async (req, res, next) => {
+  if (req.user.id != req.params.userId) next();
   try {
     const user = await User.findById(req.params.userId);
-    console.log(req.body);
     const newAddress = await Address.create(req.body);
     await newAddress.setUser(user);
     res.json(newAddress);
@@ -30,6 +31,7 @@ router.post("/add/:userId", async (req, res, next) => {
 });
 
 router.put("/edit/:userId", async (req, res, next) => {
+  if (req.user.id != req.params.userId) next();
   try {
     let address = await Address.findOne({
       where: { userId: req.params.userId }
