@@ -4,6 +4,7 @@ import { checkoutCart } from "../store/cart";
 import { convertPrice } from "../store/books";
 import { editAddress } from "../store/address";
 import { edittedUser } from "../store/user";
+import { Link } from "react-router-dom"
 import StripeCheckout from "react-stripe-checkout";
 import CheckoutForm from "./CheckoutForm";
 
@@ -91,11 +92,13 @@ class Checkout extends React.Component {
             disabled={this.state.hasempty}
           />
         </div>
-        <div>
+        <div id="cartitems">
           {books
             ? books.map(book => (
                 <div className="cartitem" key={book.id}>
-                  <img src={book.imageUrl} />
+                  <Link to={`books/${book.id}`}>
+                    <img src={book.imageUrl} />
+                  </Link>
                   <div>
                     <h4>{book.title}</h4>
                     <h5>
