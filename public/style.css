@@ -101,11 +101,6 @@ form div {
   text-align: center;
 }
 
-.allGenres {
-  text-align: center;
-  margin: 0 0 0 5em;
-}
-
 #genre-param {
   text-align: center;
 }
@@ -155,6 +150,7 @@ form div {
 .navbar-features {
   display: flex;
   align-items: center;
+  color: black
 }
 
 .navbar-links {
@@ -167,22 +163,17 @@ form div {
 
 }
 
-
 .navbar {
-  background: linear-gradient(
-    #62B1F6,
-    #63B8FF,
-    #74BBFB,
-    rgb(114, 180, 230)
-  );
+  background-color: lightblue;
   border: none;
   height: 128px;
-  z-index: 2
+  z-index: 2;
+  border-bottom-color: black;
 }
 
 hr {
-  margin: 0;
-  padding: 0;
+margin: 3.63px;
+width: 100%;
 }
 
 .link-name:hover {
@@ -266,18 +257,6 @@ textarea {
 }
 
 
-.allGenres {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  height: 300px;
-}
-
-.each-genre {
-  width: 15em;
-  height: 100px;
-  margin: auto;
-}
 
 #books-by-genres {
   text-align: center;
@@ -368,11 +347,78 @@ textarea {
 
 
 .purchase-history-btn {
-  position: absolute;
-  left: 45%;
-  padding-top: 10px
+  position: relative;
+  margin: 10px;
 }
 
 .navbar-writing {
+  font-style: italic
+}
+
+
+
+.allGenres {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  align-content: centre;
+  width: 100%;
+}
+
+.each-genre {
+margin-bottom: 10px;
+margin-left: 80px
+}
+
+.genre-images {
+  display: flex;
+  flex-wrap: wrap;
+  height: 180px;
+  width: 180px;
+  margin-left: 35px;
+}
+
+.genre-names {
+  margin-right: 10px;
+  z-index: 3;
+
+}
+
+.allGenres {
+  text-align: center;
+  margin: 0 0 0 5em;
+  margin-bottom: 10px;
+  padding-bottom: 10px
+}
+
+.navbar-writing {
+  margin-right: 17px;
+  font-weight: bold;
+  color: black;
+
+}
+
+.navbar-writing:hover {
+ text-decoration-line: underline
+}
+
+.signup {
+  color: black;
+  font-style: italic
+}
+
+.login {
+    color: black;
+    font-style: italic
+}
+
+.home-link {
+  color: black;
+  font-style: italic
+}
+
+.logout-link {
+  color: black;
   font-style: italic
 }
