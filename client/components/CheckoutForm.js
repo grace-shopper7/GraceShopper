@@ -48,7 +48,7 @@ const CheckoutForm = props => {
         type="text"
         name="state"
         onChange={props.handleChange}
-        value={props.state.county}
+        value={props.state.state}
       />
 
       <label htmlFor="country">Country</label>
@@ -56,7 +56,7 @@ const CheckoutForm = props => {
         type="text"
         name="country"
         onChange={props.handleChange}
-        value={props.state.county}
+        value={props.state.country}
       />
     </form>
   );
