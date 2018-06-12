@@ -2,6 +2,8 @@ import React from "react";
 import { connect } from "react-redux";
 import { checkoutCart } from "../store/cart";
 import { convertPrice } from "../store/books";
+// import { get } from "../store/address";
+import { edittedUser } from "../store/user";
 import StripeCheckout from "react-stripe-checkout";
 import CheckoutForm from "./CheckoutForm";
 
@@ -32,7 +34,14 @@ class Checkout extends React.Component {
 
   handleChange = async event => {
     await this.setState({ [event.target.name]: event.target.value });
-    const fields = Object.keys(this.state);
+    const fields = [
+      "firstName",
+      "lastName",
+      "street",
+      "zipcode",
+      "city",
+      "country"
+    ];
     for (let i = 0; i < fields.length; i++) {
       if (!this.state[fields[i]]) {
         this.setState({ hasempty: true });
@@ -44,6 +53,10 @@ class Checkout extends React.Component {
 
   completePurchase = total => {
     this.props.checkout(this.props.cart.active);
+    this.props.editUser(this.props.user.id, {
+      firstName: this.state.firstName,
+      lastName: this.state.lastName
+    });
     this.props.history.push("/");
   };
 
@@ -98,7 +111,8 @@ const mapState = state => ({
 });
 
 const mapDispatch = dispatch => ({
-  checkout: cart => dispatch(checkoutCart(cart))
+  checkout: cart => dispatch(checkoutCart(cart)),
+  editUser: (id, user) => dispatch(edittedUser(id, user))
 });
 
 export default connect(
