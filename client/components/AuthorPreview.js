@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const BookPreview = props => {
+const AuthorPreview = props => {
   const author = props.author;
   return (
     <div className="author-preview" >
@@ -13,4 +13,4 @@ const BookPreview = props => {
   );
 };
 
-export default BookPreview;
+export default AuthorPreview;
