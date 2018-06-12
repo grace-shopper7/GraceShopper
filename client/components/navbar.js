@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { logout } from "../store";
 import { UserHome } from "../components";
 
+<<<<<<< HEAD
 const Navbar = ({ handleClick, isLoggedIn, user }) => {
   console.log(user.admin);
   return (
@@ -34,6 +35,35 @@ const Navbar = ({ handleClick, isLoggedIn, user }) => {
     </div>
   );
 };
+=======
+const Navbar = ({ handleClick, isLoggedIn }) => (
+  <div className='navbar'>
+    <h1 className="page-header">Barnes & Gable</h1>
+    <nav >
+      {isLoggedIn ? (
+        <div className="navbar-features">
+          <div className="navbar-links">
+          <Link to="/home" className='home-link'>Home</Link>
+          <a href="#" onClick={handleClick} className='logout-link'>
+            Logout
+          </a>
+          </div>
+          <UserHome />
+        </div>
+      ) : (
+        <div>
+          {/* The navbar will show these links before you log in */}
+          <Link to="/login" className='login'>Login</Link>
+          <Link to="/signup"
+          className='signup'>Sign Up</Link>
+        </div>
+      )}
+       <hr />
+    </nav>
+
+  </div>
+)
+>>>>>>> 9ca913d1c90037a1e62ab55cda7f8533597c971d
 
 /**
  * CONTAINER

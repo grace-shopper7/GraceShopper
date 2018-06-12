@@ -27,10 +27,12 @@ export class UserHome extends React.Component {
     );
 =======
     return  (
-    // <Link to='/user'>
-    <div className="navbar-writing">Welcome, {this.props.email}</div>
-    /* <div className="navbar-writing">View account details</div>
-    </Link> */
+    <Link to='/user'>
+    <div className="navbar-writing">
+    <div >Welcome, {this.props.email}</div>
+    <div >View account details</div>
+    </div>
+    </Link>
     )
 >>>>>>> 4bdcb3fadc940238b801703d307e22196dafc492
   }
