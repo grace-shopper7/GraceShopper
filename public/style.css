@@ -433,7 +433,15 @@ margin-left: 80px
   margin-left: 160px;
 }
 
-
 .genre-name {
   margin-left: 18px
 }
+
+#shoppingcart {
+  margin-left: 200px;
+}
+
+#checkout {
+  margin-left: 200px;
+}
+

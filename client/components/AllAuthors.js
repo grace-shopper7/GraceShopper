@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import AuthorPreview from './AuthorPreview'
 
-class AllAuthors extends Component {
+export class AllAuthors extends Component {
 
   render() {
     const authors = this.props.authors ? this.props.authors : [];
