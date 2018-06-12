@@ -19,7 +19,6 @@ label {
   top: -22px;
 }
 
-
 nav a {
   display: inline-block;
   margin: 0.5em;
@@ -42,19 +41,15 @@ form div {
   width: 30%;
   margin: 0;
   flex-direction: column;
-  align-items:center;
-  padding-top: 10px
-
+  align-items: center;
+  padding-top: 10px;
 }
-
 
 .book-titles {
   font-size: 0.9em;
   max-width: 10em;
   color: black;
   align-items: flex-start;
-
-
 }
 
 .books-author {
@@ -64,20 +59,17 @@ form div {
   padding-top: 6px;
 }
 
-
-
 .book-titles:hover {
-  color:orange;
-  text-decoration:underline;
-
+  color: orange;
+  text-decoration: underline;
 }
 
 .author-name {
-  color: black
+  color: black;
 }
 
 .author-name:hover {
-  color: orange
+  color: orange;
 }
 
 #sidebar-container {
@@ -88,8 +80,7 @@ form div {
   border-right: 1px solid gray;
   position: fixed;
   justify-content: center;
-  top: 16.8%
-
+  top: 16.8%;
 }
 
 #sidebar-links {
@@ -118,7 +109,7 @@ form div {
 }
 
 #books-container {
-  margin: 5%
+  margin: 5%;
 }
 
 #shoppingcart {
@@ -126,7 +117,7 @@ form div {
 }
 
 .cartitem {
-  display:flex;
+  display: flex;
   justify-content: space-around;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
@@ -146,7 +137,7 @@ form div {
 
 #cartoptions {
   flex-grow: 1;
-  text-align:center;
+  text-align: center;
   padding: 10px 0;
   background-color: beige;
 }
@@ -154,17 +145,16 @@ form div {
 .navbar-features {
   display: flex;
   align-items: center;
-  color: black
+  color: black;
 }
 
 .navbar-links {
   flex: 3;
-  align-items: center
+  align-items: center;
 }
 
 .navbar-writing {
   flex: 1.2;
-
 }
 
 .navbar {
@@ -176,18 +166,18 @@ form div {
 }
 
 hr {
-margin: 3.63px;
-width: 100%;
+  margin: 3.63px;
+  width: 100%;
 }
 
 .link-name:hover {
-  color:orange;
-  text-decoration:underline;
+  color: orange;
+  text-decoration: underline;
 }
 
 .all-authors {
   display: flex;
-  flex-wrap: wrap
+  flex-wrap: wrap;
 }
 
 .author-preview {
@@ -196,11 +186,9 @@ width: 100%;
   min-width: 10em;
 }
 
-
-
 .author-name:hover {
-  color:orange;
-  text-decoration:underline;
+  color: orange;
+  text-decoration: underline;
 }
 
 .top-link {
@@ -218,7 +206,7 @@ width: 100%;
   margin: auto;
 }
 
-#review-form-container{
+#review-form-container {
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
@@ -228,11 +216,11 @@ width: 100%;
 }
 
 #review-book-cover {
-  height:300px;
+  height: 300px;
 }
 
-#review-book-cover img{
-  max-height:100%;
+#review-book-cover img {
+  max-height: 100%;
 }
 
 #review-form {
@@ -260,8 +248,6 @@ textarea {
   resize: none;
 }
 
-
-
 #books-by-genres {
   text-align: center;
   display: flex;
@@ -283,16 +269,15 @@ textarea {
 }
 
 .book-cover {
- width: 11em;
- height: 16em;
+  width: 11em;
+  height: 16em;
 }
-
 
 .account-registry {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 3
+  flex: 3;
 }
 
 .address-add-form {
@@ -301,44 +286,39 @@ textarea {
   width: 150px;
   margin-left: 55px;
   margin-top: 20px;
-
 }
 
 .address-input-text {
-  margin-left: 160px
+  margin-left: 160px;
 }
-
 
 .user-details-container {
   margin-left: 200px;
-
 }
 
 .user-details {
   margin-left: 180px;
 
-  top: 3%
+  top: 3%;
 }
-
 
 .edit-address {
   position: relative;
   left: 13.5%;
-  top: 5%
+  top: 5%;
 }
 
 .user-purchase {
   position: relative;
   left: 14%;
-  padding-top: 20px
+  padding-top: 20px;
 }
 
 .purchase-history-link {
   position: relative;
   left: 16.6%;
-  padding-top: 10px
+  padding-top: 10px;
 }
-
 
 .address-edit-form {
   display: flex;
@@ -346,9 +326,7 @@ textarea {
   width: 150px;
   margin-left: 55px;
   margin-top: 20px;
-
 }
-
 
 .purchase-history-btn {
   position: relative;
@@ -356,10 +334,8 @@ textarea {
 }
 
 .navbar-writing {
-  font-style: italic
+  font-style: italic;
 }
-
-
 
 .allGenres {
   display: flex;
@@ -371,8 +347,8 @@ textarea {
 }
 
 .each-genre {
-margin-bottom: 10px;
-margin-left: 80px
+  margin-bottom: 10px;
+  margin-left: 80px;
 }
 
 .genre-images {
@@ -387,54 +363,51 @@ margin-left: 80px
   margin-right: 10px;
   color: black;
   z-index: 3;
-
 }
 
 .allGenres {
   text-align: center;
   margin: 0 0 0 5em;
   margin-bottom: 10px;
-  padding-bottom: 10px
+  padding-bottom: 10px;
 }
 
 .navbar-writing {
   margin-right: 17px;
   font-weight: bold;
   color: black;
-
 }
 
 .navbar-writing:hover {
- text-decoration-line: underline
+  text-decoration-line: underline;
 }
 
 .signup {
   color: black;
-  font-style: italic
+  font-style: italic;
 }
 
 .login {
-    color: black;
-    font-style: italic
+  color: black;
+  font-style: italic;
 }
 
 .home-link {
   color: black;
-  font-style: italic
+  font-style: italic;
 }
 
 .logout-link {
   color: black;
-  font-style: italic
+  font-style: italic;
 }
-
 
 #previouspurchases {
   margin-left: 160px;
 }
 
 .genre-name {
-  margin-left: 18px
+  margin-left: 18px;
 }
 
 #shoppingcart {
@@ -444,4 +417,3 @@ margin-left: 80px
 #checkout {
   margin-left: 200px;
 }
-
