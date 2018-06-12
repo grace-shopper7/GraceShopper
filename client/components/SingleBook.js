@@ -54,7 +54,9 @@ class SingleBook extends Component {
         </button>
         <div id="add-review-button">
           <Link to={`/new-review/${bookId}`}>
-            <button type="button">Write a review</button>
+            <button type="button" disabled={!this.props.user.id}>
+              Write a review
+            </button>
           </Link>
         </div>
         <div id="bookreviews">
