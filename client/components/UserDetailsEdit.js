@@ -67,6 +67,7 @@ class EditUserDetails extends Component {
     this.setState({
       [event.target.name]: ""
     });
+    this.props.history.push(`/user`);
   }
 
   handleChange(event) {

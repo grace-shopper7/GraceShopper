@@ -3,8 +3,6 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
 const UserDetails = props => {
-  console.log(props);
-
   return (
     <div>
       <div>Hi, {props.user.firstName}</div>
@@ -17,11 +15,15 @@ const UserDetails = props => {
               Name: {props.user.firstName} {props.user.lastName}{" "}
             </li>
             <li>Email: {props.user.email} </li>
-            <li>Street: {props.address.street} </li>
-            <li>Zipcode: {props.address.zipcode} </li>
-            <li>City: {props.address.city} </li>
-            <li>State: {props.address.state} </li>
-            <li>Country: {props.address.country} </li>
+            {props.address ? (
+              <div>
+                <li>Street: {props.address.street} </li>
+                <li>Zipcode: {props.address.zipcode} </li>
+                <li>City: {props.address.city} </li>
+                <li>State: {props.address.state} </li>
+                <li>Country: {props.address.country} </li>
+              </div>
+            ) : null}
           </ul>
         </div>
       }
