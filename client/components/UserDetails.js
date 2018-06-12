@@ -3,8 +3,6 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
 const UserDetails = props => {
-  console.log(props);
-
   return (
     <div>
       <div>Hi, {props.user.firstName}</div>

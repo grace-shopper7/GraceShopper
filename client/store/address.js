@@ -28,7 +28,6 @@ export const addAddress = (id, newAddress) => {
   return async dispatch => {
     const { data } = await axios.post(`/api/addresses/add/${id}`, newAddress)
     dispatch(getAddress(data))
-    history.push(`/user/`)
   }
 }
 
@@ -37,7 +36,6 @@ export const editAddress = (id, newAddress) => {
   return async dispatch => {
     const { data } = await axios.put(`/api/addresses/edit/${id}`, newAddress)
     dispatch(getAddress(data))
-    history.push(`/user`)
   }
 }
 
