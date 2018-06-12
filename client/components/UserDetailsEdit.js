@@ -78,7 +78,6 @@ class EditUserDetails extends Component {
   render() {
     return (
       <div className="address-input-text">
-        {" "}
         Edit your name and address below:
         <UserDetailsEditForm
           state={this.state}
