@@ -2,29 +2,13 @@ import React from "react";
 
 const UserDetailsEditForm = props => {
   return (
-    <form onSubmit={props.handleSubmit}>
+    <form onSubmit={props.handleSubmit} className="address-edit-form">
       <label htmlFor="firstName">First Name</label>
       <input
         type="text"
         name="firstName"
         onChange={props.handleChange}
         value={props.state.firstName}
-      />
-
-      <label htmlFor="lastName">Last Name</label>
-      <input
-        type="text"
-        name="lastName"
-        onChange={props.handleChange}
-        value={props.state.lastName}
-      />
-
-      <label htmlFor="email">email</label>
-      <input
-        type="text"
-        name="email"
-        onChange={props.handleChange}
-        value={props.state.email}
       />
 
       <label htmlFor="street">Street</label>
