@@ -37,7 +37,6 @@ export const editAddress = (id, newAddress) => {
   return async dispatch => {
     const { data } = await axios.put(`/api/addresses/edit/${id}`, newAddress)
     dispatch(getAddress(data))
-    console.log(data)
     history.push(`/user`)
   }
 }
