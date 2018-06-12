@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { checkoutCart } from "../store/cart";
 import { convertPrice } from "../store/books";
-// import { get } from "../store/address";
+import { editAddress } from "../store/address";
 import { edittedUser } from "../store/user";
 import StripeCheckout from "react-stripe-checkout";
 import CheckoutForm from "./CheckoutForm";
@@ -40,6 +40,7 @@ class Checkout extends React.Component {
       "street",
       "zipcode",
       "city",
+      "state",
       "country"
     ];
     for (let i = 0; i < fields.length; i++) {
@@ -52,11 +53,18 @@ class Checkout extends React.Component {
   };
 
   completePurchase = total => {
-    this.props.checkout(this.props.cart.active);
     this.props.editUser(this.props.user.id, {
       firstName: this.state.firstName,
       lastName: this.state.lastName
     });
+    this.props.editAddress(this.props.user.id, {
+      street: this.state.street,
+      zipcode: this.state.zipcode,
+      city: this.state.city,
+      state: this.state.state,
+      country: this.state.country
+    });
+    this.props.checkout(this.props.cart.active);
     this.props.history.push("/");
   };
 
@@ -112,7 +120,8 @@ const mapState = state => ({
 
 const mapDispatch = dispatch => ({
   checkout: cart => dispatch(checkoutCart(cart)),
-  editUser: (id, user) => dispatch(edittedUser(id, user))
+  editUser: (id, user) => dispatch(edittedUser(id, user)),
+  editAddress: (id, address) => dispatch(editAddress(id, address))
 });
 
 export default connect(

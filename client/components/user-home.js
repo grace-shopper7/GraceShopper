@@ -18,14 +18,6 @@ export class UserHome extends React.Component {
   }
 
   render() {
-<<<<<<< HEAD
-    return (
-      // <Link to='/user'>
-      <div className="navbar-writing">Welcome, {this.props.email}</div>
-      // <div>View account details</div>
-      // </Link>
-    );
-=======
     return  (
     <Link to='/user'>
     <div className="navbar-writing">
@@ -34,7 +26,6 @@ export class UserHome extends React.Component {
     </div>
     </Link>
     )
->>>>>>> 4bdcb3fadc940238b801703d307e22196dafc492
   }
 }
 

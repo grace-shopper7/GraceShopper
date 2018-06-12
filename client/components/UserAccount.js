@@ -13,22 +13,6 @@ class UserAccount extends Component {
     }
 
     return (
-<<<<<<< HEAD
-      <div>
-        {this.props.user.firstName ? (
-          <UserDetails address={this.props.address} />
-        ) : (
-          <div>
-            <p>
-              Your account does not have a registered address. Please register
-              an address
-            </p>
-            <Link to="/user/add/address">
-              <button>register address</button>
-            </Link>
-          </div>
-        )}
-=======
       <div className='user-page-container'>
       {
 
@@ -44,7 +28,6 @@ class UserAccount extends Component {
         </div>
 
       }
->>>>>>> 4bdcb3fadc940238b801703d307e22196dafc492
       </div>
     );
   }
