@@ -48,6 +48,7 @@ class SingleBook extends Component {
         <button
           type="submit"
           onClick={() => this.props.addItem(selectedBook, +this.props.user.id)}
+          disabled={!this.props.user.id}
         >
           Add to Cart
         </button>
