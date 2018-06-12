@@ -303,3 +303,76 @@ textarea {
  width: 11em;
  height: 16em;
 }
+
+
+.account-registry {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 3
+}
+
+.address-add-form {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  margin-left: 55px;
+  margin-top: 20px;
+
+}
+
+.address-input-text {
+  margin-left: 160px
+}
+
+
+.user-details-container {
+  display: flex;
+  justify-content: center
+}
+
+.user-details {
+  position: relative;
+  left: 40%;
+  top: 3%
+}
+
+
+.edit-address {
+  position: relative;
+  left: 41.6%;
+  top: 5%
+}
+
+.user-purchase {
+  position: relative;
+  left: 42%;
+  padding-top: 20px
+}
+
+.purchase-history-link {
+  position: relative;
+  left: 45%;
+  padding-top: 10px
+}
+
+
+.address-edit-form {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+  margin-left: 55px;
+  margin-top: 20px;
+
+}
+
+
+.purchase-history-btn {
+  position: absolute;
+  left: 45%;
+  padding-top: 10px
+}
+
+.navbar-writing {
+  font-style: italic
+}
