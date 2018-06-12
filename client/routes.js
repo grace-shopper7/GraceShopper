@@ -55,6 +55,7 @@ class Routes extends Component {
         <Route exact path="/user/edit/address" component={UserDetailsEdit} />
         <Route exact path="/authors" component={AllAuthors} />
         <Route exact path="/" component={AllBooks} />
+        <Route exact path="/books" component={AllBooks} />
         {/* Displays our Login component as a fallback */}
       </Switch>
     );

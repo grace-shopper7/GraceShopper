@@ -72,9 +72,13 @@ form div {
 
 }
 
-/* .author-name:hover {
+.author-name {
+  color: black
+}
+
+.author-name:hover {
   color: orange
-} */
+}
 
 #sidebar-container {
   display: flex;
@@ -306,32 +310,32 @@ textarea {
 
 
 .user-details-container {
-  display: flex;
-  justify-content: center
+  margin-left: 200px;
+
 }
 
 .user-details {
-  position: relative;
-  left: 40%;
+  margin-left: 180px;
+
   top: 3%
 }
 
 
 .edit-address {
   position: relative;
-  left: 41.6%;
+  left: 13.5%;
   top: 5%
 }
 
 .user-purchase {
   position: relative;
-  left: 42%;
+  left: 14%;
   padding-top: 20px
 }
 
 .purchase-history-link {
   position: relative;
-  left: 45%;
+  left: 16.6%;
   padding-top: 10px
 }
 
@@ -381,6 +385,7 @@ margin-left: 80px
 
 .genre-names {
   margin-right: 10px;
+  color: black;
   z-index: 3;
 
 }
@@ -421,4 +426,14 @@ margin-left: 80px
 .logout-link {
   color: black;
   font-style: italic
+}
+
+
+#previouspurchases {
+  margin-left: 160px;
+}
+
+
+.genre-name {
+  margin-left: 18px
 }
