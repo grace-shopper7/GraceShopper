@@ -30,6 +30,19 @@ class Checkout extends React.Component {
       initState = Object.assign(initState, { firstName, lastName });
     }
     if (props.address) initState = Object.assign(initState, props.address);
+    initState.hasempty = false;
+    const fields = [
+      "firstName",
+      "lastName",
+      "street",
+      "zipcode",
+      "city",
+      "state",
+      "country"
+    ];
+    for (let i = 0; i < fields.length; i++) {
+      if (!initState[fields[i]]) initState.hasempty = true
+    }
     return initState;
   };
 
