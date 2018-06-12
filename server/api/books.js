@@ -4,10 +4,15 @@ module.exports = router;
 
 router.get("/", async (req, res, next) => {
   try {
+
+
+    console.log(req.params)
     let result = await Book.findAll({ include: [Author, { model: Review, include: [User] }] });
     res.json(result);
+
   } catch (err) {
     next(err);
+
   }
 });
 

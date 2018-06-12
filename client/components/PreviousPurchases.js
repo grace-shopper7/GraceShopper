@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { convertPrice } from "../store/books";
 
+
 class PreviousPurchases extends React.Component {
   render() {
     const carts = this.props.cart.previous ? this.props.cart.previous : [];
@@ -35,7 +36,8 @@ class PreviousPurchases extends React.Component {
             </div>
           ))
         ) : (
-          <div>You have not made any purchases</div>
+          <div className='no-purchases'>You have not made any purchases...</div>
+
         )}
       </div>
     );

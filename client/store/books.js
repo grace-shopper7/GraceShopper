@@ -27,7 +27,7 @@ export const convertPrice = price => {
 //THUNK CREATORS
 export const gotBooks = () => {
   return async dispatch => {
-    const { data } = await axios.get("/api/books");
+    const { data } = await axios.get("/api/books/");
     dispatch(getBooks(data));
   };
 };
