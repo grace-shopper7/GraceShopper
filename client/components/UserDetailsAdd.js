@@ -53,7 +53,9 @@ class UserDetailsAdd extends Component {
 
   render() {
     return (
+      <div className="address-input-text"> Enter your name and address below:
       <UserDetailsAddForm state={this.state} handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>
+      </div>
     );
   }
 }
