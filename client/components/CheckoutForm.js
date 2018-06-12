@@ -1,8 +1,8 @@
 import React from "react";
 
-const UserDetailsEditForm = props => {
+const CheckoutForm = props => {
   return (
-    <form onSubmit={props.handleSubmit} className="address-edit-form">
+    <form>
       <label htmlFor="firstName">First Name</label>
       <input
         type="text"
@@ -17,14 +17,6 @@ const UserDetailsEditForm = props => {
         name="lastName"
         onChange={props.handleChange}
         value={props.state.lastName}
-      />
-
-      <label htmlFor="email">email</label>
-      <input
-        type="text"
-        name="email"
-        onChange={props.handleChange}
-        value={props.state.email}
       />
 
       <label htmlFor="street">Street</label>
@@ -66,10 +58,8 @@ const UserDetailsEditForm = props => {
         onChange={props.handleChange}
         value={props.state.county}
       />
-
-      <button type="submit">Save Changes</button>
     </form>
   );
 };
 
-export default UserDetailsEditForm;
+export default CheckoutForm;

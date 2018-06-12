@@ -24,7 +24,7 @@ class SingleBook extends Component {
     return (
       <div id="single-book-view">
         <div>
-          <img className='book-cover' src={selectedBook.imageUrl} />
+          <img className="book-cover" src={selectedBook.imageUrl} />
         </div>
 
         <div>
@@ -59,7 +59,11 @@ class SingleBook extends Component {
         <div id="bookreviews">
           {reviews.filter(review => review.text).map(review => (
             <div className="review" key={review.id}>
-              <h4>{`${review.user ? `${review.user.firstName} ${review.user.lastName}: `: ""}${review.rating} / 5`}</h4>
+              <h4>{`${
+                review.user
+                  ? `${review.user.firstName} ${review.user.lastName}: `
+                  : ""
+              }${review.rating} / 5`}</h4>
               <p>{review.text}</p>
             </div>
           ))}

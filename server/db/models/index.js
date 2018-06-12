@@ -35,10 +35,10 @@ Cart.belongsToMany(Book, {through: Transaction})
 Book.belongsToMany(Cart, {through: Transaction})
 
 Address.belongsTo(User)
-User.hasMany(Address)
+User.hasOne(Address)
 
-Cart.belongsTo(Address)
-Address.hasMany(Cart)
+Address.belongsTo(Cart)
+Cart.hasOne(Address)
 
 User.afterCreate(async user => {
   const cart = await Cart.create({status: "active"})

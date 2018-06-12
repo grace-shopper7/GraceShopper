@@ -56,10 +56,9 @@ export const removeItemFromCart = (item, userId) => {
   };
 };
 
-export const checkoutCart = userId => {
+export const checkoutCart = cart => {
   return async dispatch => {
-    console.log(userId)
-    const { data } = await axios.put(`/api/cart/checkout/${userId}`);
+    const { data } = await axios.put(`/api/cart/checkout`, cart);
     dispatch(checkout(data.active, data.previous));
   };
 };

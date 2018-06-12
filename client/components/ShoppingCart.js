@@ -9,6 +9,10 @@ class ShoppingCart extends React.Component {
     const books = this.props.cart.active ? this.props.cart.active.books : [];
     const id = this.props.user.id;
     const user = this.props.user;
+    const total =
+      books && books.length
+        ? convertPrice(books.reduce((acc, book) => acc + book.price, 0))
+        : 0;
     return (
       <div id="shoppingcart">
         <div id="cartitems">
@@ -42,18 +46,14 @@ class ShoppingCart extends React.Component {
           )}
         </div>
         <div id="cartoptions">
-          {books && books.length ? (
-            <div>{`Total: ${convertPrice(
-              books.reduce((acc, book) => acc + book.price, 0)
-            )}`}</div>
-          ) : null}
+          {books && books.length ? <div>{`Total: ${total}`}</div> : null}
           {user.firstName ? (
             <div>{`${user.firstName} ${user.lastName}`}</div>
           ) : null}
           {id ? (
-            <button type="submit" onClick={() => this.props.checkout(id)}>
-              Checkout
-            </button>
+            <Link to="/checkout">
+              <button type="submit">Proceed to checkout</button>
+            </Link>
           ) : (
             <div>Please log in to view your cart</div>
           )}
