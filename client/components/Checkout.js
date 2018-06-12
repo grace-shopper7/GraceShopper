@@ -8,6 +8,7 @@ import { Link } from "react-router-dom"
 import StripeCheckout from "react-stripe-checkout";
 import CheckoutForm from "./CheckoutForm";
 
+
 class Checkout extends React.Component {
   constructor() {
     super();

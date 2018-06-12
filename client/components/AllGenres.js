@@ -38,8 +38,11 @@ export class AllGenres extends React.Component {
       <div className="allGenres">
         {unique.map((genre, index) =>
           <div className="each-genre" key={genre}>
-           <img src={pictures[index]} className='genre-images'/>
-            <Link to={`/genres/${genre}`} className='genre-names'>{genre}</Link>
+            <Link to={`/genres/${genre}`} className='genre-names'>
+            <img src={pictures[index]}
+           className='genre-images'/>
+            <div className="genre-name">{genre}</div>
+            </Link>
           </div>
         )}
       </div>
