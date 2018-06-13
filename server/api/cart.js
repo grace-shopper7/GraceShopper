@@ -27,7 +27,6 @@ router.get("/:id", async (req, res, next) => {
   }
 });
 
-
 router.put("/add/:id", async (req, res, next) => {
   if (req.user.id != req.params.id) next();
   try {
@@ -72,7 +71,13 @@ router.put("/checkout", async (req, res, next) => {
     const user = await activeCart.getUser();
     const address = await user.getAddress();
     if (address) activeCart.setAddress(address);
-    const previous = await user.getCarts();
+    const previous = await Cart.findAll({
+      where: {
+        userId: user.id,
+        completed: true
+      },
+      include: [{ model: Book, include: [Author], required: false }]
+    });
     const active = await Cart.create({ status: "active" });
     await user.addCart(active);
     res.json({ previous, active });
@@ -85,7 +90,7 @@ router.post("/guest", async (req, res, next) => {
   try {
     const cart = await Cart.create({
       status: "active",
-      session: req.session.id,
+      session: req.session.id
     });
     res.json(cart);
   } catch (err) {
@@ -137,9 +142,13 @@ router.put("/guest/checkout", async (req, res, next) => {
       where: {
         session: req.session.id,
         completed: true
-      }
+      },
+      include: [{ model: Book, include: [Author], required: false }]
     });
-    const active = await Cart.create({ status: "active", session: req.session.id });
+    const active = await Cart.create({
+      status: "active",
+      session: req.session.id
+    });
     res.json({ previous, active });
   } catch (err) {
     next(err);
