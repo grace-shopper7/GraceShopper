@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { checkoutCart } from "../store/cart";
+import { checkoutCart, checkoutGuestCart } from "../store/cart";
 import { convertPrice } from "../store/books";
 import { editAddress } from "../store/address";
 import { edittedUser } from "../store/user";

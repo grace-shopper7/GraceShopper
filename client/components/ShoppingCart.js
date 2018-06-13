@@ -1,10 +1,16 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { removeItemFromCart, checkoutCart } from "../store/cart";
+import { removeItemFromCart, removeItemFromGuestCart } from "../store/cart";
 import { convertPrice } from "../store/books";
 
 class ShoppingCart extends React.Component {
+  removeItem = book => {
+    this.props.user.id
+      ? this.props.removeItem(book, this.props.user.id)
+      : this.props.removeGuestItem(book);
+  };
+
   render() {
     const books = this.props.cart.active ? this.props.cart.active.books : [];
     const id = this.props.user.id;
@@ -35,7 +41,7 @@ class ShoppingCart extends React.Component {
                 </div>
                 <button
                   type="submit"
-                  onClick={() => this.props.removeItem(book, id)}
+                  onClick={() => this.removeItem(book)}
                 >
                   Remove from cart
                 </button>
@@ -47,16 +53,14 @@ class ShoppingCart extends React.Component {
         </div>
         <div id="cartoptions">
           {books && books.length ? <div>{`Total: ${total}`}</div> : null}
-          {user.firstName ? (
+          {user && user.firstName ? (
             <div>{`${user.firstName} ${user.lastName}`}</div>
           ) : null}
-          {id ? (
+          {books && books.length ? (
             <Link to="/checkout">
               <button type="submit">Proceed to checkout</button>
             </Link>
-          ) : (
-            <div>Please log in to view your cart</div>
-          )}
+          ) : null}
         </div>
       </div>
     );
@@ -69,8 +73,8 @@ const mapState = state => ({
 });
 
 const mapDispatch = dispatch => ({
-  checkout: id => dispatch(checkoutCart(id)),
-  removeItem: (book, id) => dispatch(removeItemFromCart(book, id))
+  removeItem: (book, id) => dispatch(removeItemFromCart(book, id)),
+  removeGuestItem: book => dispatch(removeItemFromGuestCart(book))
 });
 
 export default connect(
