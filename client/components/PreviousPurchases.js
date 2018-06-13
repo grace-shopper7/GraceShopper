@@ -12,7 +12,7 @@ class PreviousPurchases extends React.Component {
         {carts.length ? (
           carts.map(cart => (
             <div key={cart.id} className="previouspurchase">
-              <h5>{`Purchsed on ${cart.updatedAt.slice(0, 10)}`}</h5>
+              <h5>{`Purchased on ${cart.updatedAt.slice(0, 10)}`}</h5>
               {cart.books
                 ? cart.books.map(book => (
                     <div className="cartitem" key={book.id}>
