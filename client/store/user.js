@@ -1,13 +1,13 @@
 import axios from "axios";
 import history from "../history";
-import { getAllCarts } from "./cart";
+import { getAllCarts, getAllGuestCarts } from "./cart";
 
 /**
  * ACTION TYPES
  */
 const GET_USER = "GET_USER";
 const REMOVE_USER = "REMOVE_USER";
-const EDIT_USER = "EDIT_USER"
+const EDIT_USER = "EDIT_USER";
 
 /**
  * INITIAL STATE
@@ -19,7 +19,7 @@ const defaultUser = {};
  */
 const getUser = user => ({ type: GET_USER, user });
 const removeUser = () => ({ type: REMOVE_USER });
-const changeUser = user => ({type: EDIT_USER, user})
+const changeUser = user => ({ type: EDIT_USER, user });
 
 /**
  * THUNK CREATORS
@@ -29,7 +29,9 @@ export const me = () => dispatch =>
     .get("/auth/me")
     .then(res => {
       dispatch(getUser(res.data || defaultUser));
-      if (res.data.id) dispatch(getAllCarts(res.data.id));
+      res.data.id
+        ? dispatch(getAllCarts(res.data.id))
+        : dispatch(getAllGuestCarts());
     })
     .catch(err => console.log(err));
 
@@ -58,12 +60,12 @@ export const logout = () => dispatch =>
     })
     .catch(err => console.log(err));
 
-    export const edittedUser = (id, newUser) => {
-      return async dispatch => {
-        const { data } = await axios.put(`/api/users/${id}`, newUser)
-        dispatch(changeUser(data))
-      }
-    }
+export const edittedUser = (id, newUser) => {
+  return async dispatch => {
+    const { data } = await axios.put(`/api/users/${id}`, newUser);
+    dispatch(changeUser(data));
+  };
+};
 
 /**
  * REDUCER

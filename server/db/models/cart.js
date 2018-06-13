@@ -10,6 +10,10 @@ const Cart = db.define('cart', {
   status: {
     type: Sequelize.STRING,
   },
+  session: {
+    type: Sequelize.STRING,
+    defaultValue: null
+  }
 })
 
 module.exports = Cart

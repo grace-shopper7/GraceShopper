@@ -44,3 +44,13 @@ router.put("/edit/:userId", async (req, res, next) => {
     next(error);
   }
 });
+
+router.post("/guest", async (req, res, next) => {
+  try {
+    const newAddress = await Address.create(req.body);
+    res.json(newAddress);
+  } catch (error) {
+    next(error);
+  }
+});
+

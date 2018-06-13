@@ -1,13 +1,27 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { withRouter, Route, Switch, Link } from "react-router-dom";
-import { addItemToCart } from "../store/cart";
+import { addItemToCart, createGuestCart, addItemToGuestCart } from "../store/cart";
 import { convertPrice } from "../store/books";
 
 /**
  * COMPONENT
  */
 class SingleBook extends Component {
+
+  addToCart = async () => {
+    const bookId = this.props.match.params.bookId;
+    const selectedBook = this.props.books.filter(book => {
+      return book.id === +bookId;
+    })[0];
+    if (this.props.user && this.props.user.id) {
+      this.props.addItem(selectedBook, +this.props.user.id)
+    } else {
+      if (!this.props.cart.active.id) await this.props.createGuestCart()
+      this.props.addItemToGuestCart(selectedBook)
+    }
+  }
+  
   render() {
     if (this.props.books.length === 0) {
       return <div>Loading...</div>;
@@ -47,8 +61,7 @@ class SingleBook extends Component {
 
         <button
           type="submit"
-          onClick={() => this.props.addItem(selectedBook, +this.props.user.id)}
-          disabled={!this.props.user.id}
+          onClick={this.addToCart}
         >
           Add to Cart
         </button>
@@ -83,12 +96,15 @@ class SingleBook extends Component {
 const mapState = state => {
   return {
     books: state.books,
-    user: state.user
+    user: state.user,
+    cart: state.cart
   };
 };
 
 const mapDispatch = dispatch => ({
-  addItem: (book, id) => dispatch(addItemToCart(book, id))
+  addItem: (book, id) => dispatch(addItemToCart(book, id)),
+  createGuestCart: () => dispatch(createGuestCart()),
+  addItemToGuestCart: item => dispatch(addItemToGuestCart(item))
 });
 
 // The `withRouter` wrapper makes sure that updates are not blocked
