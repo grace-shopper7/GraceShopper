@@ -98,9 +98,6 @@ router.put("/guest/add", async (req, res, next) => {
     let activeCart = await Cart.findOne({
       where: { session: req.session.id, completed: false }
     });
-    let allCarts = await Cart.findAll()
-    console.log(allCarts)
-    console.log(req.session.id)
     const book = await Book.findOne({ where: { id: req.body.id } });
     await activeCart.addBook(book);
     activeCart = await Cart.findOne({

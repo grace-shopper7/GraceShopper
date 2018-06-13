@@ -2,12 +2,11 @@ import React from "react";
 import { connect } from "react-redux";
 import { checkoutCart, checkoutGuestCart } from "../store/cart";
 import { convertPrice } from "../store/books";
-import { editAddress } from "../store/address";
+import { editAddress, createGuestAddress } from "../store/address";
 import { edittedUser } from "../store/user";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import StripeCheckout from "react-stripe-checkout";
 import CheckoutForm from "./CheckoutForm";
-
 
 class Checkout extends React.Component {
   constructor() {
@@ -42,7 +41,7 @@ class Checkout extends React.Component {
       "country"
     ];
     for (let i = 0; i < fields.length; i++) {
-      if (!initState[fields[i]]) initState.hasempty = true
+      if (!initState[fields[i]]) initState.hasempty = true;
     }
     return initState;
   };
@@ -67,19 +66,30 @@ class Checkout extends React.Component {
     this.setState({ hasempty: false });
   };
 
-  completePurchase = total => {
-    this.props.editUser(this.props.user.id, {
-      firstName: this.state.firstName,
-      lastName: this.state.lastName
-    });
-    this.props.editAddress(this.props.user.id, {
-      street: this.state.street,
-      zipcode: this.state.zipcode,
-      city: this.state.city,
-      state: this.state.state,
-      country: this.state.country
-    });
-    this.props.checkout(this.props.cart.active);
+  completePurchase = async total => {
+    if (this.props.user.id) {
+      this.props.editUser(this.props.user.id, {
+        firstName: this.state.firstName,
+        lastName: this.state.lastName
+      });
+      this.props.editAddress(this.props.user.id, {
+        street: this.state.street,
+        zipcode: this.state.zipcode,
+        city: this.state.city,
+        state: this.state.state,
+        country: this.state.country
+      });
+      this.props.checkout(this.props.cart.active);
+    } else {
+      const addressId = await this.props.createGuestAddress({
+        street: this.state.street,
+        zipcode: this.state.zipcode,
+        city: this.state.city,
+        state: this.state.state,
+        country: this.state.country
+      })
+      this.props.checkoutGuestCart(this.props.cart.active, addressId);
+    }
     this.props.history.push("/");
   };
 
@@ -88,7 +98,6 @@ class Checkout extends React.Component {
     const total = books
       ? convertPrice(books.reduce((acc, book) => acc + book.price, 0))
       : 0;
-    console.log(this.state);
     return (
       <div id="checkout">
         <CheckoutForm handleChange={this.handleChange} state={this.state} />
@@ -137,8 +146,11 @@ const mapState = state => ({
 
 const mapDispatch = dispatch => ({
   checkout: cart => dispatch(checkoutCart(cart)),
+  checkoutGuestCart: (cart, addressId) =>
+    dispatch(checkoutGuestCart(cart, addressId)),
   editUser: (id, user) => dispatch(edittedUser(id, user)),
-  editAddress: (id, address) => dispatch(editAddress(id, address))
+  editAddress: (id, address) => dispatch(editAddress(id, address)),
+  createGuestAddress: address => dispatch(createGuestAddress(address))
 });
 
 export default connect(
